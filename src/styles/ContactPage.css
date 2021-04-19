@@ -1,0 +1,558 @@
+.formik {
+    position: absolute;
+    top: 0;
+    left: 0vw;
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.424);
+    animation: moveContact1 1s linear 1 forwards;
+}
+
+.myForm {
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    width: 100%;
+}
+
+.myForm h1 {
+    font-size: 35px;
+    margin-bottom: 5vh;
+    width: 100%;
+}
+
+.myForm input {
+    width: 15vw;
+    height: 5vh;
+    margin: 3vh 2vh;
+    padding: 20px;
+    font-size: 16px;
+    /* text-align: center; */
+    letter-spacing: 2px;
+}
+
+.myForm textarea {
+    width: 32vw;
+    height: 25vh;
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* .myForm .labelCheck {
+    font-size: 25px;
+    width: 32vw;
+} */
+
+.labelCheck input {
+    height: 22px;
+    width: 22px;
+    color: #222;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 2;
+}
+
+.labelCheck p {
+    width: 32vw;
+    margin: 3vh 0;
+    text-align: left;
+    display: inline-block;
+    font-size: 25px;
+}
+
+.cookieLink {
+    color: rgb(51, 107, 170);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.cookieLink:hover {
+    color: rgb(57, 138, 230);
+}
+
+.myForm button {
+    margin-top: 3vh;
+    width: 25vw;
+    height: 5vh;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.644);
+    color: #222;
+    border: none;
+    box-shadow: 0 0 2px 1px white;
+    transition: .4s;
+}
+
+.myForm button:hover {
+    background-color: rgb(255, 255, 255);
+    color: #222;
+}
+
+.contactMedia {
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.424);
+    animation: moveContact2 1s linear 1 forwards;
+}
+
+@keyframes moveContact1 {
+    0% {
+        left: -100vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+}
+
+@keyframes moveContact2 {
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 0vw;
+    }
+}
+
+.social1,
+.social2,
+.social3,
+.social4 {
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    width: 60%;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.social2 {
+    top: 28vh;
+    font-size: 35px;
+}
+
+.social3 {
+    top: 41vh;
+    border-bottom: 4px #222 solid;
+    padding-bottom: 30px;
+}
+
+.social4 {
+    top: 55vh;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contactMedia img {
+    height: 80px;
+    width: 80px;
+    margin-right: 50px;
+}
+
+.contactMedia p {
+
+    line-height: 80px;
+    color: #222;
+
+}
+
+.fa-university {
+    font-size: 35px;
+    margin: 20px;
+}
+
+.social4 h1 {
+    font-size: 35px;
+    margin: 0 auto 20px;
+    color: #fff;
+}
+
+.social4 p {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.cookieBg {
+    background-color: rgba(2, 1, 1, 0.445);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.privateCookie {
+
+    width: 100vw;
+    padding: 0 100px;
+    text-align: center;
+    color: white;
+    /* margin: 0 auto; */
+
+}
+
+.privateCookie h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 100px auto;
+}
+
+.privateCookie h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 30px auto;
+}
+
+.privateCookie p {
+    font-size: 30px;
+    margin: 3vh auto;
+    width: 80%;
+}
+
+.privateCookie span {
+    margin-top: 50px;
+    border-top: 2px solid white;
+    font-size: 20px;
+}
+
+@media (orientation:portrait) and (min-width: 320px) {
+    .formik {
+        position: relative;
+        top: 0;
+        left: 0vw;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.424);
+        animation: moveContact1 1s linear 1 forwards;
+    }
+
+    .myForm {
+        position: absolute;
+        top: 10vh;
+
+    }
+
+    .myForm h1 {
+        font-size: 30px;
+        margin-bottom: 3vh;
+        width: 100%;
+    }
+
+    .myForm input {
+        width: 46%;
+        height: 6vh;
+        margin: 3vh 2%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .myForm textarea {
+        width: 96vw;
+        height: 25vh;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .labelCheck input {
+        height: 22px;
+        width: 22px;
+        margin: 0 10px;
+        line-height: 1.2;
+    }
+
+    .labelCheck p {
+        width: 98vw;
+        margin: 3vh auto;
+        text-align: center;
+        display: inline-block;
+        font-size: 23px;
+    }
+
+
+    .myForm button {
+        margin: 2vh;
+        width: 60vw;
+        height: 5vh;
+        font-size: 20px;
+    }
+
+    .contactMedia {
+        position: relative;
+        top: 0;
+        right: 0vw;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    @keyframes moveContact1 {
+        0% {
+            top: -100vh;
+        }
+
+        100% {
+            top: 0vh;
+        }
+    }
+
+    @keyframes moveContact2 {
+        0% {
+            bottom: -100vh;
+        }
+
+        100% {
+            bottom: 0vh;
+        }
+    }
+
+    .social1,
+    .social2,
+    .social3,
+    .social4 {
+        top: 8vh;
+        font-size: 20px;
+        font-weight: 500;
+        width: 90%;
+    }
+
+    .social2 {
+        top: 20vh;
+        font-size: 35px;
+    }
+
+    .social3 {
+        top: 32vh;
+        border-bottom: 4px #222 solid;
+        padding-bottom: 20px;
+    }
+
+    .social4 {
+        top: 50vh;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contactMedia img {
+        height: 60px;
+        width: 60px;
+        margin-right: 20px;
+    }
+
+    .contactMedia p {
+
+        line-height: 80px;
+        color: #222;
+
+    }
+
+    .fa-university {
+        font-size: 35px;
+        margin: 20px;
+    }
+
+    .social4 h1 {
+        font-size: 30px;
+    }
+
+    .social4 p {
+        font-size: 26px;
+        text-align: center;
+        line-height: 1.4;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+
+
+    .privateCookie {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .privateCookie h1 {
+        font-size: 40px;
+    }
+
+    .privateCookie h2 {
+        font-size: 35px;
+        letter-spacing: 1px;
+        margin: 30px auto;
+    }
+
+    .privateCookie p {
+        font-size: 24px;
+        margin: 3vh auto;
+        width: 80%;
+    }
+
+    .privateCookie span {
+        margin-top: 70px;
+        border-top: none;
+        font-size: 18px;
+    }
+
+}
+
+@media (orientation:landscape) and (max-width: 1023px) {
+
+    .myForm {
+        top: 8vh;
+    }
+
+    .myForm h1 {
+        font-size: 22px;
+        margin: 0 auto 1vh;
+        width: 90%;
+
+    }
+
+    .myForm input {
+        width: 20vw;
+        height: 5vh;
+        margin: 1vh 2vh;
+        padding: 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .myForm textarea {
+        width: 42vw;
+        height: 25vh;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .labelCheck input {
+        height: 16px;
+        width: 16px;
+        line-height: 1;
+    }
+
+    .labelCheck p {
+        width: 40vw;
+        margin: 0vh;
+        font-size: 16px;
+    }
+
+    .cookieLink {
+        color: rgb(51, 107, 170);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .cookieLink:hover {
+        color: rgb(57, 138, 230);
+    }
+
+    .myForm button {
+        margin-top: 2vh;
+        width: 25vw;
+        height: 7vh;
+        font-size: 16px;
+    }
+
+    .social1,
+    .social2,
+    .social3,
+    .social4 {
+        top: 12vh;
+        font-size: 16px;
+        font-weight: 400;
+        width: 90%;
+    }
+
+    .social2 {
+        top: 25vh;
+        font-size: 22px;
+    }
+
+    .social3 {
+        top: 38vh;
+        border-bottom: 2px #222 solid;
+        padding-bottom: 20px;
+    }
+
+    .social4 {
+        top: 55vh;
+        font-size: 20px;
+    }
+
+    .contactMedia img {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    .contactMedia p {
+        line-height: 1.5;
+        color: #222;
+    }
+
+    .fa-university {
+        font-size: 22px;
+        margin: 5px;
+    }
+
+    .social4 h1 {
+        font-size: 24px;
+        margin: 0 auto 10px;
+    }
+
+    .social4 p {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+
+    .privateCookie {
+        width: 100vw;
+        padding: 0 100px;
+        text-align: center;
+        color: white;
+        /* margin: 0 auto; */
+    }
+
+    .privateCookie h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+        margin: 100px auto;
+    }
+
+    .privateCookie h2 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin: 30px auto;
+    }
+
+    .privateCookie p {
+        font-size: 18px;
+        margin: 3vh auto;
+        width: 90%;
+    }
+
+    .privateCookie span {
+        margin-top: 100px;
+        border-top: none;
+        font-size: 16px;
+    }
+
+}

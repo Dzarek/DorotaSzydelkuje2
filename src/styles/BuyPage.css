@@ -1,0 +1,587 @@
+.buyPage h1 {
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 15vh auto 10vh;
+}
+
+.buttonBuyPage {
+    display: none;
+}
+
+.buyPage .activeH1Buy {
+    font-size: 34px;
+    width: 60vw;
+    margin: 15vh auto 10vh 0vw;
+    animation: startCircle 1s linear 1 forwards;
+}
+
+.toBuyNow,
+.toBuyNow2 {
+    position: relative;
+    left: 0vw;
+    top: 0vh;
+    min-height: 250vh;
+}
+
+
+.toBuyNow ul,
+.toBuyNow2 ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    width: 60vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
+    animation: startCircle 1s linear 1 forwards;
+}
+
+.toBuyNow2 ul {
+    position: static;
+    animation: startCircle 1s linear 1 forwards;
+}
+
+
+
+.toBuyNow ul li,
+.toBuyNow2 ul li {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(3, 3, 3, 0.7);
+    background-color: rgba(47, 6, 42, 0.8);
+    color: white;
+    font-size: 20px;
+    margin: 50px;
+    text-decoration: none;
+    list-style: none;
+    box-shadow: 0 0 15px 5px white;
+    position: relative;
+    transition: .5s;
+    border-radius: 10px;
+    border: 4px solid white;
+}
+
+.toBuyNow ul li:hover,
+.toBuyNow2 ul li:hover {
+    transform: scale(1.4);
+}
+
+.toBuyNow ul li div,
+.toBuyNow2 ul li div {
+    height: 300px;
+    width: 100%;
+    padding-top: .5%;
+
+}
+
+.toBuyNow li p,
+.toBuyNow2 li p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(3, 3, 3, 0.7);
+    background-color: rgba(47, 6, 42, 0.8);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.fa-sign-in-alt {
+
+    animation: fa-sign-in-altMove 2s linear infinite;
+}
+
+@keyframes fa-sign-in-altMove {
+    0% {
+        margin-right: 10px;
+    }
+
+    100% {
+        margin-right: 0px;
+    }
+}
+
+
+/* .toBuyNow li .rec.rec,
+.toBuyNow2 li .rec.rec {
+    width: 100%;
+    height: 100%;
+} */
+
+.toBuyNow li .rec.rec img,
+.toBuyNow2 li .rec.rec img {
+    margin: 0 auto;
+    height: 95%;
+    width: 100%;
+
+}
+
+.toBuyNow li .rec.rec-arrow,
+.toBuyNow2 li .rec.rec-arrow {
+    transform: scale(.8);
+    border-radius: 0;
+    height: 60px;
+    width: 10px;
+    font-size: 20px;
+    background-color: rgba(22, 22, 22, 0.555);
+    color: white;
+    position: absolute;
+    left: -1%;
+    z-index: 10;
+}
+
+.toBuyNow li .rec.rec-arrow-right,
+.toBuyNow2 li .rec.rec-arrow-right {
+    left: 84%;
+
+}
+
+.toBuyNow li .rec.rec-arrow:hover,
+.toBuyNow2 li .rec.rec-arrow:hover {
+    background-color: rgba(22, 22, 22, 0.863);
+}
+
+.toBuyNow li .rec.rec-arrow:disabled,
+.toBuyNow2 li .rec.rec-arrow:disabled {
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+.aboutAndBuy {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0vw;
+    top: 0vh;
+    height: 100vh;
+    width: 40vw;
+    padding: 10vh 5vw;
+    background-color: rgba(23, 24, 80, 0.2);
+    animation: startCircle 1s linear 1 forwards;
+}
+
+.myForm2 {
+    /* position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%); */
+    color: white;
+    width: 100%;
+
+}
+
+
+
+.myForm2 input {
+    width: 46%;
+    height: 4vh;
+    margin: 1vh 2%;
+    padding: 15px;
+    font-size: 16px;
+    /* text-align: center; */
+    letter-spacing: 2px;
+}
+
+.myForm2 textarea {
+    width: 96%;
+    height: 20vh;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.myForm2 .labelCheck p {
+    width: 100%;
+    margin: 1vh 0;
+    text-align: left;
+    display: inline-block;
+    font-size: 23px;
+}
+
+.myForm2 .labelCheck input {
+    height: 22px;
+    width: 22px;
+    color: #222;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 2;
+}
+
+.myForm2 h3 {
+    font-size: 30px;
+}
+
+
+.myForm2 .cookieLink {
+    color: rgb(23, 23, 24);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.myForm2.cookieLink:hover {
+    color: rgb(57, 138, 230);
+}
+
+.myForm2 button {
+    margin-top: 1vh;
+    width: 25vw;
+    height: 5vh;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.644);
+    color: #222;
+    border: none;
+    box-shadow: 0 0 2px 1px white;
+    transition: .4s;
+}
+
+.myForm2 button:hover {
+    background-color: rgb(255, 255, 255);
+    color: #222;
+}
+
+.aboutAndBuy .aboutAndBuyText {
+    height: 50vh;
+    width: 100%;
+    border: 3px solid white;
+    margin-bottom: 3vh;
+    padding: 10px;
+    background-color: rgba(18, 18, 19, 0.2);
+    text-align: left;
+    line-height: 1.5;
+}
+
+.aboutAndBuy .aboutAndBuyText span h3 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+.aboutAndBuy .aboutAndBuyText span p strong {
+    margin-left: 10px;
+}
+
+.aboutAndBuy .aboutAndBuyText span p {
+    color: white;
+    font-size: 26px;
+}
+
+@media (orientation: portrait) and (min-width: 320px) {
+    .buyPage h1 {
+        font-size: 28px;
+        margin: 12vh auto 5vh;
+        width: 90vw;
+    }
+
+    .buyPage .activeH1Buy {
+        font-size: 24px;
+        width: 90vw;
+        margin: 12vh auto 5vh;
+    }
+
+    .toBuyNow,
+    .toBuyNow2 {
+        position: relative;
+        left: 0vw;
+        top: 0vh;
+        min-height: 400vh;
+    }
+
+    .toBuyNow ul,
+    .toBuyNow2 ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100vw;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    .toBuyNow2 ul {
+        position: static;
+    }
+
+
+
+    .toBuyNow ul li,
+    .toBuyNow2 ul li {
+        width: 80vw;
+        height: 60vh;
+        font-size: 20px;
+        margin: 50px auto;
+        position: relative;
+    }
+
+
+
+    .toBuyNow ul li:hover,
+    .toBuyNow2 ul li:hover {
+        transform: none;
+    }
+
+    .toBuyNow ul li div,
+    .toBuyNow2 ul li div {
+        height: 42vh;
+        width: 100%;
+        padding-top: .5%;
+    }
+
+    .toBuyNow li p,
+    .toBuyNow2 li p {
+        height: 30%;
+    }
+
+
+    .aboutAndBuy {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0vw;
+        top: 0vh;
+        height: 100vh;
+        width: 100vw;
+        padding: 10vh 5vw;
+        background-color: rgba(23, 24, 80, 0.95);
+    }
+
+    .buttonBuyPage {
+        display: block;
+        position: absolute;
+        left: 50vw;
+        transform: translateX(-50%);
+        top: 3vw;
+        font-size: 34px;
+        color: whitesmoke;
+        padding-right: 2vh;
+        background-color: transparent;
+        border: none;
+    }
+
+
+    .myForm2 input {
+        width: 46%;
+        height: 5vh;
+        margin: 1vh 2%;
+        padding: 10px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .myForm2 textarea {
+        width: 96%;
+        height: 20vh;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .myForm2 h3 {
+        font-size: 26px;
+    }
+
+
+    .myForm2 .cookieLink {
+        color: rgb(255, 163, 163);
+    }
+
+    .myForm2 button {
+        margin-top: 2vh;
+        width: 50vw;
+        height: 5vh;
+        font-size: 18px;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #222;
+        box-shadow: 0 0 3px 3px white;
+    }
+
+
+    .aboutAndBuy .aboutAndBuyText {
+        height: 40vh;
+        border: 2px solid white;
+        margin-bottom: 2vh;
+        padding: 5px;
+        line-height: 1.3;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span h3 {
+        font-size: 30px;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span p strong {
+        margin-left: 3px;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span p {
+        font-size: 20px;
+    }
+}
+
+@media (orientation:landscape) and (max-width: 1023px) {
+    .buyPage h1 {
+        font-size: 28px;
+        margin: 12vh auto 5vh;
+        width: 90vw;
+    }
+
+    .buyPage .activeH1Buy {
+        font-size: 24px;
+        width: 90vw;
+        margin: 12vh auto 5vh;
+    }
+
+    .toBuyNow,
+    .toBuyNow2 {
+        position: relative;
+        left: 0vw;
+        top: 0vh;
+        min-height: 600vh;
+    }
+
+    .toBuyNow ul,
+    .toBuyNow2 ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100vw;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 0vw;
+        top: 0vh;
+    }
+
+    .toBuyNow2 ul {
+        position: static;
+    }
+
+
+
+    .toBuyNow ul li,
+    .toBuyNow2 ul li {
+        width: 40vw;
+        height: 80vh;
+        font-size: 20px;
+        margin: 50px auto;
+        position: relative;
+    }
+
+    .toBuyNow ul li div,
+    .toBuyNow2 ul li div {
+        height: 55vh;
+        width: 100%;
+        padding-top: .5%;
+    }
+
+    .toBuyNow ul li:hover,
+    .toBuyNow2 ul li:hover {
+        transform: none;
+    }
+
+    .toBuyNow li p,
+    .toBuyNow2 li p {
+        height: 30%;
+    }
+
+
+    .aboutAndBuy {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        right: 0vw;
+        top: 0vh;
+        height: 100vh;
+        width: 100vw;
+        padding: 10vh 5vw;
+        background-color: rgba(23, 24, 80, 0.95);
+    }
+
+    .buttonBuyPage {
+        display: block;
+        position: absolute;
+        left: 10vw;
+        transform: translateX(-50%);
+        top: 12vh;
+        font-size: 34px;
+        color: whitesmoke;
+        padding-right: 2vh;
+        background-color: transparent;
+        border: none;
+        z-index: 10000;
+    }
+
+
+    .myForm2 input {
+        width: 46%;
+        height: 5vh;
+        margin: 1vh 2%;
+        padding: 10px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .myForm2 textarea {
+        width: 96%;
+        height: 35vh;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .myForm2 h3 {
+        font-size: 26px;
+    }
+
+    .myForm2 .labelCheck p {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1;
+    }
+
+
+    .myForm2 .cookieLink {
+        color: rgb(255, 163, 163);
+    }
+
+    .myForm2 button {
+        margin-top: 2vh;
+        width: 40vw;
+        height: 5vh;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #222;
+        box-shadow: 0 0 3px 3px white;
+    }
+
+
+    .aboutAndBuy .aboutAndBuyText {
+        height: 80vh;
+        width: 60vw;
+        border: 2px solid white;
+        margin-bottom: 2vh;
+        padding: 5px;
+        line-height: 1.3;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span h3 {
+        font-size: 30px;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span p strong {
+        margin-left: 3px;
+    }
+
+    .aboutAndBuy .aboutAndBuyText span p {
+        font-size: 20px;
+        margin-top: 4vh;
+    }
+}

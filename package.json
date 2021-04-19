@@ -1,0 +1,60 @@
+{
+  "homepage": "https://Dzarek.github.io/dorotaSzydelkuje",
+  "name": "dorotapage",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@brainhubeu/react-carousel": "^1.19.26",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.3",
+    "emailjs-com": "^2.6.4",
+    "formik": "^2.2.6",
+    "gh-pages": "^3.1.0",
+    "infinite-react-carousel": "^1.2.11",
+    "pure-react-carousel": "^1.27.6",
+    "react": "^17.0.1",
+    "react-animated-slider": "^1.1.4",
+    "react-cookie-consent": "^6.2.3",
+    "react-dom": "^17.0.1",
+    "react-elastic-carousel": "^0.11.5",
+    "react-font": "^1.2.1",
+    "react-icons": "^4.2.0",
+    "react-responsive-carousel": "^3.2.13",
+    "react-router-dom": "^5.2.0",
+    "react-router-scroll-to-top": "^1.1.2",
+    "react-scripts": "4.0.3",
+    "simple-react-lightbox": "^3.6.6",
+    "styled-components": "^5.2.3",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "style-loader": "^1.3.0"
+  }
+}

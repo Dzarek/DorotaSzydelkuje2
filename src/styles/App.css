@@ -1,0 +1,102 @@
+*:focus {
+  outline: none;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+}
+
+.appBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url(../images/pexels-cottonbro-3942924.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -5;
+}
+
+/* header {
+  height: 10vh;
+} */
+
+main {
+  /* padding: 30px 0; */
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+
+}
+
+.footerWrap {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-around;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  flex-wrap: nowrap;
+}
+
+.footerWrap * {
+  flex-grow: 1;
+}
+
+@media (orientation: portrait) and (min-width: 320px) {
+  footer {
+    height: 30vh;
+  }
+
+  .footerWrap {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    letter-spacing: 1px;
+  }
+
+  .footerWrap * {
+    margin: 7px auto;
+  }
+
+}
+
+@media (orientation:landscape) and (max-width: 1023px) {
+  footer {
+
+    width: 100vw;
+    height: 20vh;
+  }
+
+  .footerWrap {
+    flex-direction: row;
+    padding: 5px 0;
+    letter-spacing: 0px;
+    flex-wrap: nowrap;
+  }
+
+  .footerWrap * {
+    flex-grow: 1;
+    font-size: 12px;
+  }
+
+}

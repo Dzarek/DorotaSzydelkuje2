@@ -1,0 +1,808 @@
+.aboutOne {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.Dorota1 {
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.376);
+    box-shadow: 0 0 20px 5px white;
+    animation: pictureShow .8s ease 1 forwards;
+}
+
+@keyframes pictureShow {
+    0% {
+        bottom: -50vh;
+    }
+
+    100% {
+        bottom: 15vh;
+    }
+}
+
+.aboutHello {
+    font-size: 90px;
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(9, 47, 78, 0.911);
+    text-transform: uppercase;
+    animation: helloH1 1s ease 1 forwards;
+}
+
+@keyframes helloH1 {
+    0% {
+        top: -20vh;
+    }
+
+    100% {
+        top: 15vh;
+    }
+}
+
+
+.pAboutMe p {
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+    animation: showTextAboutMe 1s linear 1 forwards;
+    position: absolute;
+}
+
+@keyframes showTextAboutMe {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.pAboutMe :first-child {
+    font-size: 60px;
+    top: 20vh;
+    left: 7vw;
+    animation-delay: 1s;
+    transform: rotate(-20deg);
+}
+
+.pAboutMe :nth-child(2) {
+    top: 15vh;
+    left: 75vw;
+    animation-delay: 2s;
+    transform: rotate(10deg);
+}
+
+.pAboutMe :nth-child(3) {
+    top: 45vh;
+    left: 20vw;
+    animation-delay: 3s;
+}
+
+.pAboutMe :nth-child(4) {
+    top: 40vh;
+    left: 65vw;
+    animation-delay: 4s;
+    /* transform: rotate(20deg); */
+}
+
+.pAboutMe :nth-child(5) {
+    top: 75vh;
+    left: 10vw;
+    animation-delay: 5s;
+    transform: rotate(10deg);
+}
+
+.pAboutMe :last-child {
+    position: absolute;
+    top: 75vh;
+    left: 65vw;
+    animation-delay: 6s;
+    transform: rotate(-5deg);
+}
+
+.arrowDown {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 90vh;
+    left: 72vw;
+    transform: rotate(20deg);
+    opacity: 0;
+    animation: showTextAboutMe 1s linear infinite alternate 6s;
+}
+
+.aboutOneA {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+}
+
+.Dorota4a,
+.Dorota4b {
+    position: absolute;
+    /* transform: scale(.8); */
+    height: 40vh;
+    width: 50%;
+}
+
+.aboutOneA1,
+.aboutOneA2 {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    width: 60vw;
+    height: 40vh;
+    border: 2px solid whitesmoke;
+    background-color: rgba(14, 13, 13, 0.383);
+}
+
+.aboutOneA1 p {
+    color: white;
+    font-size: 31px;
+    width: 25vw;
+    margin-left: 32vw;
+    height: 40vh;
+    margin-top: 5vh;
+}
+
+.aboutOneA2 p {
+    color: white;
+    font-size: 31px;
+    width: 25vw;
+    margin: 5vh 32vw 0 2vw;
+    height: 40vh;
+    margin-top: 5vh;
+}
+
+.fa-bed {
+    margin: 20px;
+}
+
+.aboutOneA2 {
+    top: 50vh;
+}
+
+.Dorota4a {
+    top: 0;
+    left: 0;
+}
+
+.Dorota4b {
+    bottom: 0;
+    right: 0;
+}
+
+.aboutTwo {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.Dorota2a,
+.Dorota2b,
+.Dorota2c {
+    position: absolute;
+    border-radius: 10%;
+    border: 2px solid white;
+    animation: moveDorota2 4s linear infinite alternate;
+}
+
+.Dorota2a {
+    top: 7vh;
+    left: 7vw;
+    transform: rotate(10deg) scale(.8);
+}
+
+.Dorota2b {
+    top: 50vh;
+    left: 12vw;
+    transform: rotate(-10deg) scale(.8);
+    animation-delay: 2s;
+}
+
+.Dorota2c {
+    top: 10vh;
+    left: 35vw;
+    transform: rotate(-7deg) scale(.8);
+    animation-delay: 4s;
+}
+
+@keyframes moveDorota2 {
+    0% {
+        filter: grayscale(100%);
+    }
+
+    30% {
+        filter: grayscale(100%);
+    }
+
+    100% {
+        filter: grayscale(0%);
+    }
+}
+
+.aboutTwo p {
+    font-size: 34px;
+    line-height: 1.8;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 20vh;
+    left: 60vw;
+    width: 30vw;
+    font-weight: bold;
+}
+
+.fa-grin-hearts {
+    margin-left: 30px;
+    font-size: 50px;
+    animation: smileDown 4s ease infinite alternate;
+}
+
+@keyframes smileDown {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(10vw) rotate(360deg);
+    }
+}
+
+.aboutThird {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Dorota3a,
+.Dorota3b {
+    width: 350px;
+    height: 70vh;
+    filter: brightness(0.9) sepia(30%);
+}
+
+.Dorota3a {
+    border: 2px solid white;
+    border-radius: 10% 0 0 10%;
+    animation: moveDorota3 5s linear infinite;
+}
+
+.Dorota3b {
+    border: 2px solid white;
+    border-radius: 0 10% 10% 0;
+    animation: moveDorota3 5s linear infinite reverse;
+}
+
+@keyframes moveDorota3 {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(-5vh);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10vh);
+    }
+}
+
+.aboutThird p {
+    color: white;
+    margin: 0 50px;
+    font-size: 30px;
+    line-height: 1.6;
+    width: 20vw;
+}
+
+.fa-smile-beam {
+    margin-left: 20px;
+}
+
+.fa-grin-beam-sweat {
+    font-size: 26px;
+    margin: 0 10px;
+}
+
+@media (orientation:portrait) and (min-width: 320px) {
+    .aboutOne {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .Dorota1 {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        border-radius: 0%;
+        filter: opacity(0.6) saturate(50%);
+        background-color: rgba(255, 255, 255, 0.376);
+        box-shadow: none;
+        animation: pictureShow .8s ease 1 forwards;
+
+    }
+
+    @keyframes pictureShow {
+        0% {
+            top: 100vh;
+        }
+
+        100% {
+            top: 0;
+        }
+    }
+
+    .aboutHello {
+        width: 100vw;
+        font-size: 70px;
+        top: 5vh;
+        color: rgb(236, 236, 236);
+        z-index: 1;
+    }
+
+    @keyframes helloH1 {
+        0% {
+            top: -20vh;
+        }
+
+        100% {
+            top: 5vh;
+        }
+    }
+
+
+    .pAboutMe p {
+        font-size: 28px;
+        z-index: 1;
+    }
+
+    .pAboutMe :first-child {
+        font-size: 34px;
+        top: 20vh;
+        left: 4vw;
+        transform: rotate(-10deg);
+    }
+
+    .pAboutMe :nth-child(2) {
+        top: 30vh;
+        left: 50vw;
+        transform: rotate(5deg);
+    }
+
+    .pAboutMe :nth-child(3) {
+        top: 40vh;
+        left: 5vw;
+        transform: rotate(10deg);
+    }
+
+    .pAboutMe :nth-child(4) {
+        width: 95vw;
+        top: 50vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .pAboutMe :nth-child(5) {
+        width: 70vw;
+        top: 73vh;
+        left: 5vw;
+        transform: rotate(-20deg);
+    }
+
+    .pAboutMe :last-child {
+        top: 80vh;
+        left: 55vw;
+        transform: rotate(-5deg);
+    }
+
+    .arrowDown {
+        height: 50px;
+        width: 50px;
+        top: 90vh;
+        left: 32vw;
+        transform: rotate(-15deg) scaleX(-1);
+        z-index: 1;
+    }
+
+    .aboutOneA {
+        display: flex;
+        flex-direction: column;
+        height: 160vh;
+        width: 100vw;
+        position: static;
+
+    }
+
+    .aboutOneA1,
+    .aboutOneA2 {
+        position: static;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column-reverse;
+        /* padding-top: 10vh; */
+        /* background-color: transparent; */
+    }
+
+    .Dorota4a,
+    .Dorota4b {
+        position: absolute;
+        height: 40vh;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .aboutOneA1 p {
+        font-size: 24px;
+        width: 90vw;
+        margin: 10vh auto;
+        height: 40vh;
+
+    }
+
+    .aboutOneA2 p {
+        font-size: 24px;
+        width: 90vw;
+        margin: 5vh auto;
+        height: 40vh;
+
+    }
+
+    .fa-bed {
+        margin: 20px;
+    }
+
+
+    .Dorota4a {
+        position: static;
+    }
+
+    .Dorota4b {
+        position: static;
+    }
+
+    .aboutTwo {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        margin: 5vh auto 0vh;
+    }
+
+    .Dorota2a,
+    .Dorota2b,
+    .Dorota2c {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .Dorota2a {
+        top: -10vh;
+        left: 15vw;
+        transform: rotate(10deg) scale(.35);
+    }
+
+    .Dorota2b {
+        top: 50vh;
+        left: 15vw;
+        transform: rotate(-10deg) scale(.4);
+        animation-delay: 2s;
+    }
+
+    .Dorota2c {
+        top: 10vh;
+        left: 30vw;
+        transform: rotate(-7deg) scale(.4);
+        animation-delay: 4s;
+    }
+
+    .aboutTwo p {
+        font-size: 26px;
+        line-height: 1.2;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 10vh;
+        left: 1vw;
+        width: 50vw;
+        font-weight: 400;
+    }
+
+    .fa-grin-hearts {
+        margin-left: 20px;
+        font-size: 30px;
+        animation: smileDown 4s ease infinite alternate;
+    }
+
+    @keyframes smileDown {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        20% {
+            transform: translateY(0px) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(10vh) rotate(360deg);
+        }
+    }
+
+    .aboutThird {
+        height: auto;
+        width: 100vw;
+        position: relative;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0vh auto 10vh;
+    }
+
+    .Dorota3a,
+    .Dorota3b {
+        width: 50vw;
+        height: 50vh;
+        filter: brightness(0.9) sepia(30%);
+    }
+
+    .Dorota3a {
+        border: 2px solid white;
+        border-radius: 10% 0 0 10%;
+        animation: moveDorota3 5s linear infinite;
+    }
+
+    .Dorota3b {
+        border: 2px solid white;
+        border-radius: 0 10% 10% 0;
+        animation: moveDorota3 5s linear infinite reverse;
+    }
+
+    @keyframes moveDorota3 {
+        0% {
+            opacity: 0;
+            transform: translateY(10vh);
+        }
+
+        20% {
+            opacity: 1;
+            transform: translateY(0vh);
+        }
+
+        80% {
+            opacity: 1;
+            transform: translateY(-5vh);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-10vh);
+        }
+    }
+
+    .aboutThird p {
+        color: white;
+        margin: 10vh auto;
+        font-size: 26px;
+        line-height: 1.2;
+        width: 90vw;
+    }
+
+    .fa-smile-beam {
+        margin-left: 20px;
+    }
+
+    .fa-grin-beam-sweat {
+        font-size: 26px;
+        margin: 0 10px;
+    }
+
+}
+
+@media (orientation:landscape) and (max-width: 1023px) {
+
+
+    .Dorota1 {
+        bottom: 40vh;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(.5);
+    }
+
+    @keyframes pictureShow {
+        0% {
+            bottom: -50vh;
+        }
+
+        100% {
+            bottom: 40vh;
+        }
+    }
+
+    .aboutHello {
+        font-size: 50px;
+    }
+
+    .pAboutMe p {
+        font-size: 22px;
+    }
+
+
+    .pAboutMe :first-child {
+        font-size: 30px;
+        top: 20vh;
+        left: 4vw;
+    }
+
+    .pAboutMe :nth-child(3) {
+        left: 10vw;
+    }
+
+
+    .pAboutMe :nth-child(5) {
+        top: 75vh;
+        left: 2vw;
+        animation-delay: 5s;
+        transform: rotate(20deg);
+    }
+
+    .pAboutMe :last-child {
+        position: absolute;
+        top: 75vh;
+        left: 65vw;
+        animation-delay: 6s;
+        transform: rotate(-5deg);
+    }
+
+    .arrowDown {
+        height: 40px;
+        width: 40px;
+        top: 85vh;
+        left: 92vw;
+    }
+
+    .aboutOneA {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .Dorota4a,
+    .Dorota4b {
+        position: absolute;
+        /* transform: scale(.8); */
+        height: 50vh;
+        width: 50%;
+    }
+
+    .aboutOneA1,
+    .aboutOneA2 {
+        top: 0vh;
+        left: 0vw;
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .aboutOneA2 {
+        top: 50vh;
+    }
+
+    .aboutOneA1 p {
+        font-size: 18px;
+        width: 50vw;
+        margin-left: 50vw;
+        height: 50vh;
+        margin-top: 10vh;
+    }
+
+    .aboutOneA2 p {
+        font-size: 18px;
+        width: 49vw;
+        margin-left: 0vw;
+        height: 50vh;
+        margin-top: 10vh;
+        top: 50vh;
+    }
+
+    .fa-bed {
+        margin: 10px;
+    }
+
+    .aboutTwo {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+    }
+
+    .Dorota2a {
+        top: 15vh;
+        left: -20vw;
+        transform: rotate(10deg) scale(.3);
+    }
+
+    .Dorota2b {
+        top: -15vh;
+        left: -20vw;
+        transform: rotate(-10deg) scale(.3);
+        animation-delay: 2s;
+    }
+
+    .Dorota2c {
+        top: -10vh;
+        left: 7vw;
+        transform: rotate(-7deg) scale(.3);
+        animation-delay: 4s;
+    }
+
+    .aboutTwo p {
+        font-size: 22px;
+        line-height: 1.4;
+        top: 20vh;
+        left: 50vw;
+        width: 50vw;
+        font-weight: 500;
+    }
+
+    .fa-grin-hearts {
+        margin-left: 10px;
+        font-size: 20px;
+        animation: smileDown 4s ease infinite alternate;
+    }
+
+
+    .Dorota3a,
+    .Dorota3b {
+        width: 20vw;
+        height: 60vh;
+    }
+
+
+    .aboutThird p {
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.2;
+        width: 20vw;
+    }
+
+    .fa-smile-beam {
+        margin-left: 20px;
+    }
+
+    .fa-grin-beam-sweat {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+}
