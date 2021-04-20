@@ -47,14 +47,18 @@ const zabawki = () => {
       <div className="textAndDetails">
         <section className="textZabawki">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
-            dolores ut animi aperiam quis quaerat eaque dignissimos molestias
-            possimus, doloremque illo nobis tempora voluptas temporibus!
-            Aspernatur modi nisi quibusdam ex? <br /> <br /> Lorem, ipsum dolor
-            sit amet consectetur adipisicing elit. Nisi, dolor non beatae
-            asperiores molestias exercitationem porro! Pariatur, neque debitis
-            nihil, molestiae error quo, mollitia praesentium officiis nulla
-            voluptate voluptatem expedita?
+            Maskotka ZAJĄCZEK ręcznie wykonana na szydełku. Wykorzystane
+            materiały (poliester, kulki silikonowe) są bezpieczne nawet dla
+            najmłodyszch. Pluszak posiada również elementy tzw. bezpieczne
+            oczka. ZAJĄCZEK wygląda przyjaźnie przez co maluchy chętnie się nią
+            bawią.
+            <br /> <br /> Wykonany przeze mnie pluszak nie zniszczy się tak
+            szybko jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
+            wytrzymały (nie kurczy się i nie mechaci). Można prać w pralce w
+            30°.
+            <br /> <br /> Zamówienie staram się wykonać najszybciej jak tylko to
+            możliwe, jednak czas realizacji zależny jest od różnych
+            okoliczności. Dlatego termin wykonania ustalam indywidualnie.
           </p>
         </section>
         <section className="detailsZabawki">
@@ -68,7 +72,10 @@ const zabawki = () => {
             PIELĘGNACJA: <strong> Pranie - 30°</strong>
           </p>
           <p>
-            MATERIAŁ: <strong>100% poliester</strong>{" "}
+            MATERIAŁ:{" "}
+            <strong>
+              poliester <br /> kulki silikonowe(wypełnienie)
+            </strong>{" "}
           </p>
         </section>
       </div>

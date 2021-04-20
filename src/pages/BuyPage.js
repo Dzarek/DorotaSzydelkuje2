@@ -197,8 +197,7 @@ class BuyPage extends Component {
                     MATERIAŁ:{" "}
                     <strong>
                       {" "}
-                      1-włóczka(55% bawełna, 45% poliakryl), 2-włóczka(100%
-                      poliester)
+                      bawełna, poliakryl, poliester, kulki silikonowe
                     </strong>{" "}
                   </p>
                 </span>
@@ -231,7 +230,7 @@ class BuyPage extends Component {
                     PIELĘGNACJA: <strong> Pranie - 30°</strong>
                   </p>
                   <p>
-                    MATERIAŁ: <strong> 100% poliester</strong>{" "}
+                    MATERIAŁ: <strong>poliester, kulki silikonowe</strong>{" "}
                   </p>
                 </span>
               </section>
@@ -263,7 +262,8 @@ class BuyPage extends Component {
                     PIELĘGNACJA: <strong> Pranie - 30°</strong>
                   </p>
                   <p>
-                    MATERIAŁ: <strong> Bawełna 55%, Poliester 45%</strong>{" "}
+                    MATERIAŁ:{" "}
+                    <strong> bawełna, poliakryl, kulki silikonowe</strong>{" "}
                   </p>
                 </span>
               </section>
@@ -295,7 +295,8 @@ class BuyPage extends Component {
                     PIELĘGNACJA: <strong> Pranie - 30°</strong>
                   </p>
                   <p>
-                    MATERIAŁ: <strong> Bawełna 55%, Poliester 45%</strong>{" "}
+                    MATERIAŁ:{" "}
+                    <strong> bawełna, poliakryl, kulki silikonowe</strong>{" "}
                   </p>
                 </span>
               </section>
@@ -327,7 +328,8 @@ class BuyPage extends Component {
                     PIELĘGNACJA: <strong> Pranie - 30°</strong>
                   </p>
                   <p>
-                    MATERIAŁ: <strong> Bawełna 55%, Poliester 45%</strong>{" "}
+                    MATERIAŁ:{" "}
+                    <strong> bawełna, poliakryl, kulki silikonowe</strong>{" "}
                   </p>
                 </span>
               </section>

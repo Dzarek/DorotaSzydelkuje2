@@ -6,11 +6,17 @@ import { NavLink } from "react-router-dom";
 
 import pinguin from "../images/Products/pluszak.png";
 import krolik from "../images/Products/królik.png";
-import owieczka1 from "../images/Products/owieczka/owieczka1.jpg";
-import króliczka1 from "../images/Products/króliczka/króliczka1.jpg";
-import hipcio1 from "../images/Products/hipcio/hipcio1.jpg";
-import misiekBiały1 from "../images/Products/misiekBiały/misiekBiały1.jpg";
-import piesek1 from "../images/Products/piesek/piesek1.jpg";
+// import owieczka1 from "../images/Products/owieczka/owieczka1.jpg";
+// import króliczka1 from "../images/Products/króliczka/króliczka1.jpg";
+// import hipcio1 from "../images/Products/hipcio/hipcio1.jpg";
+// import misiekBiały1 from "../images/Products/misiekBiały/misiekBiały1.jpg";
+// import piesek1 from "../images/Products/piesek/piesek1.jpg";
+
+import owieczka1 from "../images/Products/bezTła/owieczka1-removebg-preview.png";
+import króliczka1 from "../images/Products/bezTła/króliczka1-removebg-preview.png";
+import hipcio1 from "../images/Products/bezTła/hipcio1-removebg-preview.png";
+import misiekBiały1 from "../images/Products/bezTła/misiekBiały3-removebg-preview.png";
+import piesek1 from "../images/Products/bezTła/piesek3-removebg-preview.png";
 
 class OrderPage extends Component {
   state = {
@@ -87,19 +93,43 @@ class OrderPage extends Component {
           >
             wybierz <br /> kategorie
           </h2>
-          <button onClick={this.handleChangeStatePluszaki} className="pluszaki">
+          <button
+            style={
+              this.state.activePluszaki ? { backgroundColor: "#ccc" } : null
+            }
+            onClick={this.handleChangeStatePluszaki}
+            className="pluszaki"
+          >
             <p>Pluszaki</p>
           </button>
-          <button onClick={this.handleChangeStatePufy} className="pufy">
+          <button
+            style={this.state.activePufy ? { backgroundColor: "#ccc" } : null}
+            onClick={this.handleChangeStatePufy}
+            className="pufy"
+          >
             <p>Pufy</p>
           </button>
-          <button onClick={this.handleChangeStateKoce} className="koce">
+          <button
+            style={this.state.activeKoce ? { backgroundColor: "#ccc" } : null}
+            onClick={this.handleChangeStateKoce}
+            className="koce"
+          >
             <p>Koce</p>
           </button>
-          <button onClick={this.handleChangeStatePoduszki} className="poduszki">
+          <button
+            style={
+              this.state.activePoduszki ? { backgroundColor: "#ccc" } : null
+            }
+            onClick={this.handleChangeStatePoduszki}
+            className="poduszki"
+          >
             <p>Poduszki</p>
           </button>
-          <button onClick={this.handleChangeStateKosze} className="kosze">
+          <button
+            style={this.state.activeKosze ? { backgroundColor: "#ccc" } : null}
+            onClick={this.handleChangeStateKosze}
+            className="kosze"
+          >
             <p>Kosze</p>
           </button>
         </div>
