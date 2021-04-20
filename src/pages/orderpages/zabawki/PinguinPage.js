@@ -28,7 +28,6 @@ const zabawki = () => {
             breakpoints={{
               900: {
                 slidesPerPage: 1,
-                itemWidth: 300,
               },
             }}
             addArrowClickHandler
