@@ -1,25 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/ContactPage.css";
+import emailjs from "emailjs-com";
 
-export default class MyForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.submitForm = this.submitForm.bind(this);
-    this.state = {
-      status: "",
-    };
-  }
+class MyForm2 extends Component {
+  state = {
+    status: "",
+  };
+  sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_bluxqcj",
+        "template_rxmr3mj",
+        e.target,
+        "user_hMGLIzZtMljfB9Ssj5uYj"
+      )
+      .then(
+        () => {
+          e.target.reset();
+          this.setState({ status: "SUCCESS" });
+        },
+        () => {
+          this.setState({ status: "ERROR" });
+        }
+      );
+  };
 
   render() {
     const { status } = this.state;
     return (
-      <form
-        onSubmit={this.submitForm}
-        action="https://formspree.io/f/xeqpbwaa"
-        method="POST"
-      >
-        {/* <!-- add your custom form HTML here --> */}
+      <form onSubmit={this.sendEmail}>
         <input type="text" name="name" placeholder="Imię i nazwisko" required />
         <input type="email" name="email" placeholder="E-mail" required />
         <br />
@@ -29,9 +41,7 @@ export default class MyForm extends React.Component {
           required
         ></textarea>
         <br />
-
         <label className="labelCheck" htmlFor="accept">
-          {/* <input type="checkbox" id="accept" name="accept" required /> */}
           <p>
             <input type="checkbox" id="accept" name="accept" required />
             Wyrażam zgodę na przetwarzanie danych osobowych w celu odpowiedzi na
@@ -50,27 +60,9 @@ export default class MyForm extends React.Component {
         ) : (
           <button>Wyślij</button>
         )}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        {status === "ERROR" && <p>ups... coś poszło nie tak!.</p>}
       </form>
     );
   }
-
-  submitForm(ev) {
-    ev.preventDefault();
-    const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        this.setState({ status: "SUCCESS" });
-      } else {
-        this.setState({ status: "ERROR" });
-      }
-    };
-    xhr.send(data);
-  }
 }
+export default MyForm2;

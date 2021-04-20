@@ -75,7 +75,15 @@
     height: 300px;
     width: 100%;
     padding-top: .5%;
+    /* background-color: #444; */
+    /* border-radius: 20px; */
 
+}
+
+.toBuyNow ul li div img,
+.toBuyNow2 ul li div img {
+    border: 3px solid white;
+    border-radius: 20px;
 }
 
 .toBuyNow li p,
@@ -101,20 +109,14 @@
 
 @keyframes fa-sign-in-altMove {
     0% {
-        margin-right: 10px;
+        transform: translateX(-10px);
     }
 
     100% {
-        margin-right: 0px;
+        transform: translateX(0px);
     }
 }
 
-
-/* .toBuyNow li .rec.rec,
-.toBuyNow2 li .rec.rec {
-    width: 100%;
-    height: 100%;
-} */
 
 .toBuyNow li .rec.rec img,
 .toBuyNow2 li .rec.rec img {
