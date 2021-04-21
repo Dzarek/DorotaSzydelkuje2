@@ -31,8 +31,8 @@ const Cookie = () => {
           nazwisko, adres korespondencyjny, mail, numer telefonu, adres
           rozliczeniowy, NIP) mogą być przekazane Administratorowi za pomocą
           podanego numeru telefonu, adresu e-mail, oraz formularza dostępnego na
-          stronie internetowej dorotaszydelkuje.pl. Dane mogą być zbierane także
-          podczas firmowych eventów jak wystawy, targi, pokazy.{" "}
+          stronie internetowej dorotaszydelkuje.com. Dane mogą być zbierane
+          także podczas firmowych eventów jak wystawy, targi, pokazy.{" "}
         </p>
         <p>
           {" "}
