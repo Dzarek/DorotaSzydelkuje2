@@ -19,6 +19,12 @@ import KroliczkaPage from "../pages/orderpages/zabawki/KroliczkaPage";
 import HipcioPage from "../pages/orderpages/zabawki/HipcioPage";
 import PiesekPage from "../pages/orderpages/zabawki/PiesekPage";
 import BialyMisPage from "../pages/orderpages/zabawki/BialyMisPage";
+import OsmiorniczkaPage from "../pages/orderpages/zabawki/OsmiorniczkaPage";
+import KrolikPage from "../pages/orderpages/zabawki/KrolikPage";
+//PUFY
+import PufaPage from "../pages/orderpages/pufy/PufaPage";
+//KOCE
+import SzaryKocykPage from "../pages/orderpages/koce/SzaryKocykPage";
 
 const Page = () => {
   return (
@@ -40,6 +46,12 @@ const Page = () => {
         <Route path="/hipcio" component={HipcioPage} />
         <Route path="/piesek" component={PiesekPage} />
         <Route path="/bialymis" component={BialyMisPage} />
+        <Route path="/osmiorniczka" component={OsmiorniczkaPage} />
+        <Route path="/krolik" component={KrolikPage} />
+        {/* PUFY */}
+        <Route path="/pufa" component={PufaPage} />
+        {/* KOCE */}
+        <Route path="/szaryKocyk" component={SzaryKocykPage} />
         <Route component={ErrorPage} />
       </Switch>
     </>

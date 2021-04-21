@@ -9,15 +9,17 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import króliczka1 from "../../../images/Products/króliczka/króliczka1.jpg";
-import króliczka2 from "../../../images/Products/króliczka/króliczka2.jpg";
-import króliczka3 from "../../../images/Products/króliczka/króliczka3.jpg";
+import osmiorniczka1 from "../../../images/Products/ośmiorniczka/osmiorniczka1.jpg";
+import osmiorniczka2 from "../../../images/Products/ośmiorniczka/osmiorniczka2.jpg";
+import osmiorniczka3 from "../../../images/Products/ośmiorniczka/osmiorniczka3.jpg";
+import osmiorniczka4 from "../../../images/Products/ośmiorniczka/osmiorniczka4.jpg";
+import osmiorniczka5 from "../../../images/Products/ośmiorniczka/osmiorniczka5.jpg";
 
 const zabawki = () => {
   return (
     <div className="zabawkiPage">
       <div className="orderBg"> </div>
-      <h1>Króliczka</h1>
+      <h1>Ośmiorniczka</h1>
       <SRLWrapper>
         <section className="pictureZabawki">
           <Carousel
@@ -40,20 +42,22 @@ const zabawki = () => {
               <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
             }
           >
-            <img src={króliczka1} alt="króliczka1" />
-            <img src={króliczka2} alt="króliczka2" />
-            <img src={króliczka3} alt="króliczka3" />
+            <img src={osmiorniczka1} alt="osmiorcznika1" />
+            <img src={osmiorniczka2} alt="osmiorcznika2" />
+            <img src={osmiorniczka3} alt="osmiorcznika3" />
+            <img src={osmiorniczka4} alt="osmiorcznika4" />
+            <img src={osmiorniczka5} alt="osmiorcznika5" />
           </Carousel>
         </section>
       </SRLWrapper>
       <div className="textAndDetails">
         <section className="textZabawki">
           <p>
-            Maskotka KRÓLICZKA ręcznie wykonana na szydełku. Wykorzystane
-            materiały (bawełna, poliakryl, kulki silikonowe) są bezpieczne nawet
-            dla najmłodyszch. KRÓLICZKA wygląda przyjaźnie przez co maluchy
-            chętnie się nią bawią. <br /> *KRÓLICZKA ma partnera - KRÓLIKA,
-            razem w zestawie za 80 zł.
+            Maskotka OŚMIORNICZKA ręcznie wykonana na szydełku. Wykorzystane
+            materiały (bawełna, poliakryl, kulki silikonowe, grzechotka) są
+            bezpieczne nawet dla najmłodyszch. OŚMIORNICZKA wygląda przyjaźnie
+            przez co maluchy chętnie się nią bawią. Świetnie nadaję się do
+            przymocowania przy wózku lub kołyski dziecka.
             <br /> <br /> Wykonany przeze mnie pluszak nie zniszczy się tak
             szybko jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
             wytrzymały (nie kurczy się i nie mechaci). Można prać w pralce w
@@ -65,10 +69,10 @@ const zabawki = () => {
         </section>
         <section className="detailsZabawki">
           <p>
-            CENA: <strong> 50 zł, (*zestaw 80 zł)</strong>
+            CENA: <strong> 50 zł</strong>
           </p>
           <p>
-            ROZMIAR: <strong> 31 cm</strong>
+            ROZMIAR: <strong> 18 cm</strong>
           </p>
           <p>
             PIELĘGNACJA: <strong> Pranie - 30°</strong>
@@ -77,7 +81,8 @@ const zabawki = () => {
             MATERIAŁ:{" "}
             <strong>
               {" "}
-              bawełna, poliakryl, <br /> kulki silikonowe(wypełnienie)
+              bawełna, poliakryl, <br /> kulki silikonowe,
+              grzechotka(wypełnienie)
             </strong>{" "}
           </p>
         </section>

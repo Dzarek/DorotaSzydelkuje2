@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 // import OrderPageNoActive from "./OrderPageNoActive";
 
 import pinguin from "../images/Products/pluszak.png";
-import krolik from "../images/Products/królik.png";
+import zajaczek from "../images/Products/królik.png";
 // import owieczka1 from "../images/Products/owieczka/owieczka1.jpg";
 // import króliczka1 from "../images/Products/króliczka/króliczka1.jpg";
 // import hipcio1 from "../images/Products/hipcio/hipcio1.jpg";
@@ -17,6 +17,12 @@ import króliczka1 from "../images/Products/bezTła/króliczka1-removebg-preview
 import hipcio1 from "../images/Products/bezTła/hipcio1-removebg-preview.png";
 import misiekBiały1 from "../images/Products/bezTła/misiekBiały3-removebg-preview.png";
 import piesek1 from "../images/Products/bezTła/piesek3-removebg-preview.png";
+import osmiorniczka1 from "../images/Products/bezTła/osmiorniczka1-removebg-preview.png";
+import krolik1 from "../images/Products/bezTła/krolik1-removebg-preview.png";
+
+import szaryKocyk1 from "../images/Products/bezTła/kocyk1-removebg-preview.png";
+
+import pufa1 from "../images/Products/bezTła/pufa6-removebg-preview.png";
 
 class OrderPage extends Component {
   state = {
@@ -163,7 +169,7 @@ class OrderPage extends Component {
               </li>
               <li>
                 <NavLink className="link" to="/zajaczek">
-                  <img src={krolik} alt="zajaczek" />
+                  <img src={zajaczek} alt="zajaczek" />
                   <p>ZAJĄCZEK</p>
                 </NavLink>
               </li>
@@ -171,6 +177,12 @@ class OrderPage extends Component {
                 <NavLink className="link" to="/kroliczka">
                   <img src={króliczka1} alt="rabbit" />
                   <p>KRÓLICZKA</p>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="link" to="/krolik">
+                  <img src={krolik1} alt="krolik" />
+                  <p>KRÓLIK</p>
                 </NavLink>
               </li>
               <li>
@@ -191,12 +203,17 @@ class OrderPage extends Component {
                   <p>PIESEK</p>
                 </NavLink>
               </li>
+              <li>
+                <NavLink className="link" to="/osmiorniczka">
+                  <img src={osmiorniczka1} alt="osmiorniczka" />
+                  <p>OŚMIORCZNIKA</p>
+                </NavLink>
+              </li>
             </ul>
           </div>
         ) : null}
         {this.state.activePufy ? (
           <div className="orderList pufyList">
-            {" "}
             <button
               style={{ color: "black" }}
               onClick={this.handleChangeState}
@@ -204,10 +221,19 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 50 }}>
-              STRONA W TRAKCIE PRAC... <br /> <br />
-              SPRAWDŹ ZAKŁADKĘ PLUSZAKI
-            </h1>
+            <span>
+              Pufy to wygodne siedziska, które dobrze nadają wystrój salonu lub
+              sypialni. Idealnie sprawdzają się do siedzenia przy ławie bądź
+              przy zabawie z dzieckiem na podłodze.{" "}
+            </span>
+            <ul>
+              <li>
+                <NavLink className="link" to="/pufa">
+                  <img src={pufa1} alt="pufa1" />
+                  <p>PUFA</p>
+                </NavLink>
+              </li>
+            </ul>
           </div>
         ) : null}
         {this.state.activeKoce ? (
@@ -219,10 +245,19 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 50 }}>
-              STRONA W TRAKCIE PRAC... <br /> <br />
-              SPRAWDŹ ZAKŁADKĘ PLUSZAKI
-            </h1>
+            <span>
+              W każdym domu znajduje się jakiś koc. Wydaje się że jest to wręcz
+              coś niezbędnego w naszym życiu. Nie ma to jak okryć się nim w
+              chłodne dni i zrobić sobie krótką drzemke.{" "}
+            </span>
+            <ul>
+              <li>
+                <NavLink className="link" to="/szaryKocyk">
+                  <img src={szaryKocyk1} alt="szaryKocyk" />
+                  <p>SZARY KOCYK</p>
+                </NavLink>
+              </li>
+            </ul>
           </div>
         ) : null}
         {this.state.activePoduszki ? (

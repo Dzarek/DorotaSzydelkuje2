@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../styles/ZabawkiPage.css";
-import ColorKurier from "./ColorKurier";
-import OthersZabawki from "./OthersZabawki";
+import ColorKurier from "../zabawki/ColorKurier";
+import OthersZabawki from "../zabawki/OthersZabawki";
 import { SRLWrapper } from "simple-react-lightbox";
 
 import Carousel from "@brainhubeu/react-carousel";
@@ -9,15 +9,20 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import króliczka1 from "../../../images/Products/króliczka/króliczka1.jpg";
-import króliczka2 from "../../../images/Products/króliczka/króliczka2.jpg";
-import króliczka3 from "../../../images/Products/króliczka/króliczka3.jpg";
+import pufa1 from "../../../images/Products/pufa/pufa1.jpg";
+import pufa2 from "../../../images/Products/pufa/pufa2.jpg";
+import pufa3 from "../../../images/Products/pufa/pufa3.jpg";
+import pufa4 from "../../../images/Products/pufa/pufa4.jpg";
+import pufa5 from "../../../images/Products/pufa/pufa5.jpg";
+import pufa6 from "../../../images/Products/pufa/pufa6.jpg";
+import pufa7 from "../../../images/Products/pufa/pufa7.jpg";
+import pufa8 from "../../../images/Products/pufa/pufa8.jpg";
 
 const zabawki = () => {
   return (
     <div className="zabawkiPage">
       <div className="orderBg"> </div>
-      <h1>Króliczka</h1>
+      <h1>PUFA</h1>
       <SRLWrapper>
         <section className="pictureZabawki">
           <Carousel
@@ -40,24 +45,27 @@ const zabawki = () => {
               <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
             }
           >
-            <img src={króliczka1} alt="króliczka1" />
-            <img src={króliczka2} alt="króliczka2" />
-            <img src={króliczka3} alt="króliczka3" />
+            <img src={pufa1} alt="pufa1" />
+            <img src={pufa2} alt="pufa2" />
+            <img src={pufa3} alt="pufa3" />
+            <img src={pufa4} alt="pufa4" />
+            <img src={pufa5} alt="pufa5" />
+            <img src={pufa6} alt="pufa6" />
+            <img src={pufa7} alt="pufa7" />
+            <img src={pufa8} alt="pufa8" />
           </Carousel>
         </section>
       </SRLWrapper>
       <div className="textAndDetails">
         <section className="textZabawki">
           <p>
-            Maskotka KRÓLICZKA ręcznie wykonana na szydełku. Wykorzystane
-            materiały (bawełna, poliakryl, kulki silikonowe) są bezpieczne nawet
-            dla najmłodyszch. KRÓLICZKA wygląda przyjaźnie przez co maluchy
-            chętnie się nią bawią. <br /> *KRÓLICZKA ma partnera - KRÓLIKA,
-            razem w zestawie za 80 zł.
-            <br /> <br /> Wykonany przeze mnie pluszak nie zniszczy się tak
-            szybko jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
-            wytrzymały (nie kurczy się i nie mechaci). Można prać w pralce w
-            30°.
+            PUFA ręcznie wykonany na szydełku. Wykorzystane materiały (sznurek
+            bawełniany z rdzeniem poliestrowym) są bezpieczne nawet dla
+            najmłodyszch. PUFA idealnie sprawdza się w salonie lub sypialni jako
+            wygodne siedzisko oraz dekoracja wnętrza.
+            <br /> <br /> Wykonana przeze mnie pufa nie zniszczy się tak szybko
+            jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
+            wytrzymały (nie kurczy się i nie mechaci). Można prać ręcznie.
             <br /> <br /> Zamówienie staram się wykonać najszybciej jak tylko to
             możliwe, jednak czas realizacji zależny jest od różnych
             okoliczności. Dlatego termin wykonania ustalam indywidualnie.
@@ -65,20 +73,17 @@ const zabawki = () => {
         </section>
         <section className="detailsZabawki">
           <p>
-            CENA: <strong> 50 zł, (*zestaw 80 zł)</strong>
+            CENA: <strong> 200 zł</strong>
           </p>
           <p>
-            ROZMIAR: <strong> 31 cm</strong>
+            ROZMIAR: <strong> śred. 45 cm, wys. 22 cm</strong>
           </p>
           <p>
-            PIELĘGNACJA: <strong> Pranie - 30°</strong>
+            PIELĘGNACJA: <strong> Pranie - ręczne</strong>
           </p>
           <p>
             MATERIAŁ:{" "}
-            <strong>
-              {" "}
-              bawełna, poliakryl, <br /> kulki silikonowe(wypełnienie)
-            </strong>{" "}
+            <strong> sznurek bawełniany z rdzeniem poliestrowym</strong>{" "}
           </p>
         </section>
       </div>

@@ -33,6 +33,18 @@ import króliczka1 from "../images/Products/króliczka/króliczka1.jpg";
 import króliczka2 from "../images/Products/króliczka/króliczka2.jpg";
 import króliczka3 from "../images/Products/króliczka/króliczka3.jpg";
 import króliczka4 from "../images/Products/króliczka/króliczka4.jpg";
+//królik
+import krolik1 from "../images/Products/królik/krolik1.jpg";
+import krolik2 from "../images/Products/królik/krolik2.jpg";
+import krolik3 from "../images/Products/królik/krolik3.jpg";
+import krolik4 from "../images/Products/królik/krolik4.jpg";
+
+//ośmiorniczka
+import osmiorniczka1 from "../images/Products/ośmiorniczka/osmiorniczka1.jpg";
+import osmiorniczka2 from "../images/Products/ośmiorniczka/osmiorniczka2.jpg";
+import osmiorniczka3 from "../images/Products/ośmiorniczka/osmiorniczka3.jpg";
+import osmiorniczka4 from "../images/Products/ośmiorniczka/osmiorniczka4.jpg";
+import osmiorniczka5 from "../images/Products/ośmiorniczka/osmiorniczka5.jpg";
 
 class BuyPage extends Component {
   state = {
@@ -44,6 +56,8 @@ class BuyPage extends Component {
     activePiesek: false,
     activeHipcio: false,
     activeBialyMis: false,
+    activeOsmiorniczka: false,
+    activeKrolik: false,
   };
 
   handleChangeState = () => {
@@ -56,6 +70,8 @@ class BuyPage extends Component {
       activePiesek: false,
       activeHipcio: false,
       activeBialyMis: false,
+      activeOsmiorniczka: false,
+      activeKrolik: false,
     });
   };
   handleChangeStatePinguin = () => {
@@ -94,6 +110,18 @@ class BuyPage extends Component {
       activeBialyMis: true,
     });
   };
+  handleChangeStateOsmiorniczka = () => {
+    this.handleChangeState();
+    this.setState({
+      activeOsmiorniczka: true,
+    });
+  };
+  handleChangeStateKrolik = () => {
+    this.handleChangeState();
+    this.setState({
+      activeKrolik: true,
+    });
+  };
   render() {
     return (
       <>
@@ -126,6 +154,18 @@ class BuyPage extends Component {
                 </Carousel>
                 <p onClick={this.handleChangeStateKroliczka}>
                   <i class="fas fa-sign-in-alt"></i> KRÓLICZKA
+                  <br /> Cena: 50zł
+                </p>
+              </li>
+              <li>
+                <Carousel breakPoints={1} pagination={false}>
+                  <img src={krolik1} alt="krolik1" />
+                  <img src={krolik2} alt="krolik2" />
+                  <img src={krolik3} alt="krolik3" />
+                  <img src={krolik4} alt="krolik4" />
+                </Carousel>
+                <p onClick={this.handleChangeStateKrolik}>
+                  <i class="fas fa-sign-in-alt"></i> KRÓLIK
                   <br /> Cena: 50zł
                 </p>
               </li>
@@ -168,6 +208,19 @@ class BuyPage extends Component {
                 <p onClick={this.handleChangeStateBialyMis}>
                   <i class="fas fa-sign-in-alt"></i> BIAŁY MIŚ
                   <br /> Cena: 80zł
+                </p>
+              </li>
+              <li>
+                <Carousel breakPoints={1} pagination={false}>
+                  <img src={osmiorniczka1} alt="osmiorniczka1" />
+                  <img src={osmiorniczka2} alt="osmiorniczka2" />
+                  <img src={osmiorniczka3} alt="osmiorniczka3" />
+                  <img src={osmiorniczka4} alt="osmiorniczka4" />
+                  <img src={osmiorniczka5} alt="osmiorniczka5" />
+                </Carousel>
+                <p onClick={this.handleChangeStateOsmiorniczka}>
+                  <i class="fas fa-sign-in-alt"></i> OŚMIORNICZKA
+                  <br /> Cena: 50zł
                 </p>
               </li>
             </ul>
@@ -273,6 +326,39 @@ class BuyPage extends Component {
               </span>
             </div>
           ) : null}
+          {this.state.activeKrolik ? (
+            <div className="aboutAndBuy">
+              <button
+                onClick={this.handleChangeState}
+                className="buttonBuyPage"
+              >
+                <i class="far fa-times-circle"></i>
+              </button>
+              <section className="aboutAndBuyText">
+                <span>
+                  <h3>KRÓLIK</h3>
+                  <p>
+                    CENA: <strong> 50 zł</strong>
+                  </p>
+                  <p>
+                    {" "}
+                    ROZMIAR: <strong> ok. 31cm</strong>
+                  </p>
+                  <p>
+                    PIELĘGNACJA: <strong> Pranie - 30°</strong>
+                  </p>
+                  <p>
+                    MATERIAŁ:{" "}
+                    <strong> bawełna, poliakryl, kulki silikonowe</strong>{" "}
+                  </p>
+                </span>
+              </section>
+              <span className="myForm2">
+                <h3>Napisz do mnie i zamów</h3>
+                <MyFrom2 />
+              </span>
+            </div>
+          ) : null}
           {this.state.activeHipcio ? (
             <div className="aboutAndBuy">
               <button
@@ -330,6 +416,42 @@ class BuyPage extends Component {
                   <p>
                     MATERIAŁ:{" "}
                     <strong> bawełna, poliakryl, kulki silikonowe</strong>{" "}
+                  </p>
+                </span>
+              </section>
+              <span className="myForm2">
+                <h3>Napisz do mnie i zamów</h3>
+                <MyFrom2 />
+              </span>
+            </div>
+          ) : null}
+          {this.state.activeOsmiorniczka ? (
+            <div className="aboutAndBuy">
+              <button
+                onClick={this.handleChangeState}
+                className="buttonBuyPage"
+              >
+                <i class="far fa-times-circle"></i>
+              </button>
+              <section className="aboutAndBuyText">
+                <span>
+                  <h3>OŚMIORNICZKA</h3>
+                  <p>
+                    CENA: <strong> 50 zł</strong>
+                  </p>
+                  <p>
+                    {" "}
+                    ROZMIAR: <strong> ok. 18cm</strong>
+                  </p>
+                  <p>
+                    PIELĘGNACJA: <strong> Pranie - 30°</strong>
+                  </p>
+                  <p>
+                    MATERIAŁ:{" "}
+                    <strong>
+                      {" "}
+                      bawełna, poliakryl, kulki silikonowe, grzechotka
+                    </strong>{" "}
                   </p>
                 </span>
               </section>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../styles/ZabawkiPage.css";
-import ColorKurier from "./ColorKurier";
-import OthersZabawki from "./OthersZabawki";
+import ColorKurier from "../zabawki/ColorKurier";
+import OthersZabawki from "../zabawki/OthersZabawki";
 import { SRLWrapper } from "simple-react-lightbox";
 
 import Carousel from "@brainhubeu/react-carousel";
@@ -9,15 +9,17 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import króliczka1 from "../../../images/Products/króliczka/króliczka1.jpg";
-import króliczka2 from "../../../images/Products/króliczka/króliczka2.jpg";
-import króliczka3 from "../../../images/Products/króliczka/króliczka3.jpg";
+import szaryKocyk1 from "../../../images/Products/szaryKocyk/kocyk1.jpg";
+import szaryKocyk2 from "../../../images/Products/szaryKocyk/kocyk2.jpg";
+import szaryKocyk3 from "../../../images/Products/szaryKocyk/kocyk3.jpg";
+import szaryKocyk4 from "../../../images/Products/szaryKocyk/kocyk4.jpg";
+import szaryKocyk5 from "../../../images/Products/szaryKocyk/kocyk5.jpg";
 
 const zabawki = () => {
   return (
     <div className="zabawkiPage">
       <div className="orderBg"> </div>
-      <h1>Króliczka</h1>
+      <h1>Szary Kocyk</h1>
       <SRLWrapper>
         <section className="pictureZabawki">
           <Carousel
@@ -40,22 +42,22 @@ const zabawki = () => {
               <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
             }
           >
-            <img src={króliczka1} alt="króliczka1" />
-            <img src={króliczka2} alt="króliczka2" />
-            <img src={króliczka3} alt="króliczka3" />
+            <img src={szaryKocyk1} alt="szaryKocyk1" />
+            <img src={szaryKocyk2} alt="szaryKocyk2" />
+            <img src={szaryKocyk3} alt="szaryKocyk3" />
+            <img src={szaryKocyk4} alt="szaryKocyk4" />
+            <img src={szaryKocyk5} alt="szaryKocyk5" />
           </Carousel>
         </section>
       </SRLWrapper>
       <div className="textAndDetails">
         <section className="textZabawki">
           <p>
-            Maskotka KRÓLICZKA ręcznie wykonana na szydełku. Wykorzystane
-            materiały (bawełna, poliakryl, kulki silikonowe) są bezpieczne nawet
-            dla najmłodyszch. KRÓLICZKA wygląda przyjaźnie przez co maluchy
-            chętnie się nią bawią. <br /> *KRÓLICZKA ma partnera - KRÓLIKA,
-            razem w zestawie za 80 zł.
-            <br /> <br /> Wykonany przeze mnie pluszak nie zniszczy się tak
-            szybko jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
+            SZARY KOCYK ręcznie wykonany na szydełku. Wykorzystane materiały
+            (bawełna, poliakryl) są bezpieczne nawet dla najmłodyszch. SZARY
+            KOCYK jest milutki i cieplutki, świetnie otuli maluchy do snu.
+            <br /> <br /> Wykonany przeze mnie kocyk nie zniszczy się tak szybko
+            jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
             wytrzymały (nie kurczy się i nie mechaci). Można prać w pralce w
             30°.
             <br /> <br /> Zamówienie staram się wykonać najszybciej jak tylko to
@@ -65,20 +67,16 @@ const zabawki = () => {
         </section>
         <section className="detailsZabawki">
           <p>
-            CENA: <strong> 50 zł, (*zestaw 80 zł)</strong>
+            CENA: <strong> 70 zł</strong>
           </p>
           <p>
-            ROZMIAR: <strong> 31 cm</strong>
+            ROZMIAR: <strong> 75 cm x 55 cm</strong>
           </p>
           <p>
             PIELĘGNACJA: <strong> Pranie - 30°</strong>
           </p>
           <p>
-            MATERIAŁ:{" "}
-            <strong>
-              {" "}
-              bawełna, poliakryl, <br /> kulki silikonowe(wypełnienie)
-            </strong>{" "}
+            MATERIAŁ: <strong> bawełna, poliester</strong>{" "}
           </p>
         </section>
       </div>

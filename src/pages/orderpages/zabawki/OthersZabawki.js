@@ -14,11 +14,15 @@ import króliczka1 from "../../../images/Products/króliczka/króliczka1.jpg";
 import hipcio1 from "../../../images/Products/hipcio/hipcio1.jpg";
 import misiekBiały1 from "../../../images/Products/misiekBiały/misiekBiały1.jpg";
 import piesek1 from "../../../images/Products/piesek/piesek1.jpg";
+import osmiorniczka1 from "../../../images/Products/ośmiorniczka/osmiorniczka1.jpg";
+import krolik1 from "../../../images/Products/królik/krolik1.jpg";
+import szaryKocyk1 from "../../../images/Products/szaryKocyk/kocyk1.jpg";
+import pufa1 from "../../../images/Products/pufa/pufa1.jpg";
 
 const OthersZabawki = () => {
   return (
     <section className="othersZabawki">
-      <h2>Inne rękodzieła w kategorii zabawki</h2>
+      <h2>Zobacz inne moje rękodzieła</h2>
       <ul>
         <Carousel
           infinite
@@ -65,20 +69,44 @@ const OthersZabawki = () => {
           </li>
           <li>
             <NavLink to="/hipcio">
-              <img src={hipcio1} alt="krolik" />
+              <img src={hipcio1} alt="hipcio1" />
               <p>HIPCIO</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/bialyMis">
-              <img src={misiekBiały1} alt="krolik" />
+              <img src={misiekBiały1} alt="misiekBiały1" />
               <p>BIAŁY MIŚ</p>
             </NavLink>
           </li>
           <li>
             <NavLink to="/piesek">
-              <img src={piesek1} alt="krolik" />
+              <img src={piesek1} alt="piesek1" />
               <p>PIESEK</p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/osmiorniczka">
+              <img src={osmiorniczka1} alt="osmiorniczka1" />
+              <p>OŚMIORNICZKA</p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/krolik">
+              <img src={krolik1} alt="krolik1" />
+              <p>KRÓLIK</p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/szaryKocyk">
+              <img src={szaryKocyk1} alt="szaryKocyk1" />
+              <p>SZARY KOCYK</p>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/pufa">
+              <img src={pufa1} alt="pufa1" />
+              <p>PUFA</p>
             </NavLink>
           </li>
         </Carousel>

@@ -9,7 +9,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import krolik1 from "../../../images/Products/krolik/krolik.png";
+import krolik1 from "../../../images/Products/zajaczek/krolik.png";
 
 const zabawki = () => {
   return (
