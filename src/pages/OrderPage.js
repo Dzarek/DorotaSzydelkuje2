@@ -206,7 +206,7 @@ class OrderPage extends Component {
               <li>
                 <NavLink className="link" to="/osmiorniczka">
                   <img src={osmiorniczka1} alt="osmiorniczka" />
-                  <p>OŚMIORCZNIKA</p>
+                  <p>OŚMIORNICZKA</p>
                 </NavLink>
               </li>
             </ul>
