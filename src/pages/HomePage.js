@@ -36,8 +36,8 @@ const HomePage = () => {
           autoPlay
           muted
           loop
-          playsinline
-          nocontrols
+          playsInline
+          // nocontrols
           type="video/mp4"
         ></video>
         <div className="begin">
@@ -47,7 +47,7 @@ const HomePage = () => {
             co jest milutkie i cieplutkie, <br /> wyjątkowego ubrania, zabawki
             lub ozdoby,
             <br /> jeśli kochasz włóczkę tak jak ja... <br /> zapraszam do mojej
-            oferty<i class="fas fa-smile-beam"></i>
+            oferty<i className="fas fa-smile-beam"></i>
           </p>
         </div>
         <img className="yarnBall" src={yarnBall} alt="yarnBall" />
@@ -135,7 +135,7 @@ const HomePage = () => {
         <p>
           {" "}
           spersonalizuj i wybierz kolor taki jaki Tobie odpowiada!{" "}
-          <i class="far fa-smile-wink"></i>{" "}
+          <i className="far fa-smile-wink"></i>{" "}
         </p>
         <img className="catYarn" src={catYarn} alt="catYarn" />
       </div>
