@@ -40,11 +40,10 @@ const AboutMePage = () => {
         <div className="aboutOneA1">
           <img className="Dorota4a" src={Dorota4a} alt="Dorota4a" />
           <p>
-            Pannienką już nie jestem. Zjawił się taki jeden co mnie chciał i od
-            niedawna jesteśmy małżeństwem
+            Od niedawna jestem w szczęśliwym małżeństwie
             <i style={{ marginLeft: "10px" }} class="fas fa-smile-beam"></i>.
-            Teraz czekamy na naszą córeczkę Martynę, która jeszcze mieszka w
-            moim brzuszku.
+            Teraz z mężem czekamy na naszą córeczkę Martynę, która jeszcze
+            mieszka w moim brzuszku.
           </p>
         </div>
         <div className="aboutOneA2">
