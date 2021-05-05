@@ -31,7 +31,6 @@
     color: rgba(9, 47, 78, 0.911);
     letter-spacing: 2px;
     animation: shadowColor 2s linear infinite alternate;
-
 }
 
 @keyframes shadowColor {
@@ -120,8 +119,6 @@
 
 }
 
-
-
 video {
     object-fit: cover;
     width: 100vw;
@@ -130,9 +127,26 @@ video {
     top: 0;
     left: 0;
     z-index: -5;
-    filter: brightness(0.6) sepia(25%);
-    opacity: .6;
+    /* filter: brightness(0.6) sepia(25%);
+    opacity: 0.6; */
 }
+
+.videoFilter {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    background-image: url(../images/pexels-cottonbro-3942924.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5) sepia(40%);
+    opacity: 0.6;
+}
+
 
 .home2 {
     position: relative;

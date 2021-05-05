@@ -40,6 +40,7 @@ const HomePage = () => {
           // nocontrols
           type="video/mp4"
         ></video>
+        <div className="videoFilter"></div>
         <div className="begin">
           <h1>Dorota Szydełkuje</h1>
           <p>
