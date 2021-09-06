@@ -103,7 +103,7 @@
 .toBuyZabawki {
     margin-top: 5vh;
     width: 40%;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     color: #eee;
     line-height: 1.4;
@@ -118,7 +118,7 @@
 }
 
 .orderBuy .toBuyZabawki span {
-    font-size: 40px;
+    font-size: 26px;
     font-weight: bold;
     letter-spacing: 4px;
     margin: 30px auto;
@@ -137,12 +137,12 @@
     transform: translateX(-50%);
     border: 2px solid white;
     border-radius: 5px;
-    padding: 5px 60px;
+    padding: 5px 40px;
     color: rgb(9, 95, 76);
     background-color: rgba(255, 255, 255, 0.534);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 2;
     animation: orderContactBtnPadding 1.5s linear infinite alternate;
 }

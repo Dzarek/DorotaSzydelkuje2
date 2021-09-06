@@ -40,10 +40,10 @@ const AboutMePage = () => {
         <div className="aboutOneA1">
           <img className="Dorota4a" src={Dorota4a} alt="Dorota4a" />
           <p>
-            Od niedawna jestem w szczęśliwym małżeństwie
-            <i style={{ marginLeft: "10px" }} class="fas fa-heart"></i>. Teraz z
-            mężem czekamy na naszą córeczkę Martynę, która jeszcze mieszka w
-            moim brzuszku.
+            Już od paru lat jestem w szczęśliwym małżeństwie
+            <i style={{ marginLeft: "10px" }} class="fas fa-heart"></i>.
+            Niedawno powiększyła się nasza rodzina i na świat przyszła nasza
+            córeczka Martyna.
             <i style={{ marginLeft: "10px" }} class="fas fa-baby-carriage"></i>
           </p>
         </div>

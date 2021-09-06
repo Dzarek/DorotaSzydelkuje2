@@ -25,6 +25,7 @@ class App extends Component {
             <CookieConsent
               buttonText="Akceptuje"
               cookieName="myAwesomeCookieName2"
+              className="cookieInfo"
               style={{
                 background: "rgba(0,0,0, .8)",
                 fontSize: "24px",
@@ -36,7 +37,7 @@ class App extends Component {
               buttonStyle={{
                 color: "#222",
                 fontSize: "18px",
-                margin: "0 10vw 0 0",
+                // margin: "0 10vw 0 0",
                 backgroundColor: "pink",
                 padding: "10px",
                 boxShadow: "0 0 2px 2px pink",

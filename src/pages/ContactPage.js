@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/ContactPage.css";
-// import Basic from "../components/Formik";
+
 import MyFrom from "../components/MyForm";
 
 import contact1 from "../images/Contact/contact1.png";
@@ -11,7 +11,6 @@ import contact3 from "../images/Contact/contact3.png";
 const Contact = () => {
   return (
     <>
-      {/* <div className="formik">{<Basic />}</div> */}
       <div className="formik">
         <div className="myForm">
           <MyFrom />

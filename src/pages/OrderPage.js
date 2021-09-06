@@ -1,28 +1,11 @@
 import React, { Component } from "react";
 import "../styles/OrderPage.css";
-
 import { NavLink } from "react-router-dom";
-// import OrderPageNoActive from "./OrderPageNoActive";
+import { produkt } from "../data";
 
-import pinguin from "../images/Products/pluszak.png";
-import zajaczek from "../images/Products/królik.png";
-// import owieczka1 from "../images/Products/owieczka/owieczka1.jpg";
-// import króliczka1 from "../images/Products/króliczka/króliczka1.jpg";
-// import hipcio1 from "../images/Products/hipcio/hipcio1.jpg";
-// import misiekBiały1 from "../images/Products/misiekBiały/misiekBiały1.jpg";
-// import piesek1 from "../images/Products/piesek/piesek1.jpg";
-
-import owieczka1 from "../images/Products/bezTła/owieczka1-removebg-preview.png";
-import króliczka1 from "../images/Products/bezTła/króliczka1-removebg-preview.png";
-import hipcio1 from "../images/Products/bezTła/hipcio1-removebg-preview.png";
-import misiekBiały1 from "../images/Products/bezTła/misiekBiały3-removebg-preview.png";
-import piesek1 from "../images/Products/bezTła/piesek3-removebg-preview.png";
-import osmiorniczka1 from "../images/Products/bezTła/osmiorniczka1-removebg-preview.png";
-import krolik1 from "../images/Products/bezTła/krolik1-removebg-preview.png";
-
-import szaryKocyk1 from "../images/Products/bezTła/kocyk1-removebg-preview.png";
-
-import pufa1 from "../images/Products/bezTła/pufa6-removebg-preview.png";
+const linksZabawki = produkt.filter((item) => item.type === "pluszak");
+const linksPufy = produkt.filter((item) => item.type === "pufy");
+const linksKoce = produkt.filter((item) => item.type === "koce");
 
 class OrderPage extends Component {
   state = {
@@ -82,9 +65,6 @@ class OrderPage extends Component {
           onClick={() => this.setState({ active: false })}
           className={this.state.active ? "ring" : "ring activeOrder"}
         >
-          {/* {this.state.active ? null : (
-            <h1 className="titleProducts">Wybierz interesujący Cię produkt</h1>
-          )} */}
           {!this.state.active ? null : (
             <div className="easyOrder">
               <h1 className="easyOrderha">To proste - wybierz produkt,</h1>
@@ -139,7 +119,7 @@ class OrderPage extends Component {
             <p>Kosze</p>
           </button>
         </div>
-        {this.state.activePluszaki ? (
+        {this.state.activePluszaki && (
           <div className="orderList pluszakiList">
             <button
               style={{ color: "black" }}
@@ -155,64 +135,21 @@ class OrderPage extends Component {
               <i style={{ marginLeft: 20 }} class="fas fa-heart"></i>
             </span>
             <ul>
-              <li>
-                <NavLink className="link" to="/pingwin">
-                  <img src={pinguin} alt="pinguin" />
-                  <p>PINGWINEK</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/owieczka">
-                  <img src={owieczka1} alt="owieczka" />
-                  <p>OWIECZKA</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/zajaczek">
-                  <img src={zajaczek} alt="zajaczek" />
-                  <p>ZAJĄCZEK</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/kroliczka">
-                  <img src={króliczka1} alt="rabbit" />
-                  <p>KRÓLICZKA</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/krolik">
-                  <img src={krolik1} alt="krolik" />
-                  <p>KRÓLIK</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/hipcio">
-                  <img src={hipcio1} alt="hipcio" />
-                  <p>HIPCIO</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/bialyMis">
-                  <img src={misiekBiały1} alt="bialyMis" />
-                  <p>BIAŁY MIŚ</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/piesek">
-                  <img src={piesek1} alt="piesek" />
-                  <p>PIESEK</p>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink className="link" to="/osmiorniczka">
-                  <img src={osmiorniczka1} alt="osmiorniczka" />
-                  <p>OŚMIORNICZKA</p>
-                </NavLink>
-              </li>
+              {linksZabawki.map((link) => {
+                const { id, name, url, img } = link;
+                return (
+                  <li>
+                    <NavLink key={id} className="link" to={url}>
+                      <img src={img} alt={name} />
+                      <p>{name}</p>
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </div>
-        ) : null}
-        {this.state.activePufy ? (
+        )}
+        {this.state.activePufy && (
           <div className="orderList pufyList">
             <button
               style={{ color: "black" }}
@@ -227,16 +164,21 @@ class OrderPage extends Component {
               przy zabawie z dzieckiem na podłodze.{" "}
             </span>
             <ul>
-              <li>
-                <NavLink className="link" to="/pufa">
-                  <img src={pufa1} alt="pufa1" />
-                  <p>PUFA</p>
-                </NavLink>
-              </li>
+              {linksPufy.map((link) => {
+                const { id, name, url, img } = link;
+                return (
+                  <li>
+                    <NavLink key={id} className="link" to={url}>
+                      <img src={img} alt={name} />
+                      <p>{name}</p>
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </div>
-        ) : null}
-        {this.state.activeKoce ? (
+        )}
+        {this.state.activeKoce && (
           <div className="orderList koceList">
             <button
               style={{ color: "black" }}
@@ -251,16 +193,21 @@ class OrderPage extends Component {
               chłodne dni i zrobić sobie krótką drzemke.{" "}
             </span>
             <ul>
-              <li>
-                <NavLink className="link" to="/szaryKocyk">
-                  <img src={szaryKocyk1} alt="szaryKocyk" />
-                  <p>SZARY KOCYK</p>
-                </NavLink>
-              </li>
+              {linksKoce.map((link) => {
+                const { id, name, url, img } = link;
+                return (
+                  <li>
+                    <NavLink key={id} className="link" to={url}>
+                      <img src={img} alt={name} />
+                      <p>{name}</p>
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </div>
-        ) : null}
-        {this.state.activePoduszki ? (
+        )}
+        {this.state.activePoduszki && (
           <div className="orderList poduszkiList">
             <button
               style={{ color: "black" }}
@@ -269,12 +216,12 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 50 }}>
+            <h1 style={{ fontSize: 30, paddingTop: "30vh" }}>
               STRONA W TRAKCIE PRAC... <br /> <br />
-              SPRAWDŹ ZAKŁADKĘ PLUSZAKI
+              SPRAWDŹ INNE ZAKŁADKI
             </h1>
           </div>
-        ) : null}
+        )}
         {this.state.activeKosze && (
           <div className="orderList koszeList">
             <button
@@ -284,9 +231,9 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 50 }}>
+            <h1 style={{ fontSize: 30, paddingTop: "30vh" }}>
               STRONA W TRAKCIE PRAC... <br /> <br />
-              SPRAWDŹ ZAKŁADKĘ PLUSZAKI
+              SPRAWDŹ INNE ZAKŁADKI
             </h1>
           </div>
         )}

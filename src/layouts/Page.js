@@ -34,7 +34,7 @@ const Page = () => {
         {/* NAWIGACJA */}
         <Route path="/" exact component={HomePage} />
         <Route path="/buyNow" component={BuyPage} />
-        <Route path="/order/" component={OrderPage} />
+        <Route path="/order" component={OrderPage} />
         <Route path="/aboutMe" component={AboutMePage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/cookie" component={CookiePage} />

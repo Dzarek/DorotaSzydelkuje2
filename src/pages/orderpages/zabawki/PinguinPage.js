@@ -3,21 +3,20 @@ import "../../../styles/ZabawkiPage.css";
 import ColorKurier from "./ColorKurier";
 import OthersZabawki from "./OthersZabawki";
 import { SRLWrapper } from "simple-react-lightbox";
-
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-import pinguin1 from "../../../images/Products/pingwin/pingwin1.png";
-import pinguin2 from "../../../images/Products/pingwin/pingwin2.png";
-import pinguin3 from "../../../images/Products/pingwin/pingwin3.png";
+import { produkt } from "../../../data";
 
 const zabawki = () => {
+  const newProduct = produkt.find((item) => item.name === "PINGWIN");
+  const { name, price, size, wash, material, description, images } = newProduct;
   return (
     <div className="zabawkiPage">
       <div className="orderBg"> </div>
-      <h1>Pingwinek</h1>
+      <h1>{name}</h1>
       <SRLWrapper>
         <section className="pictureZabawki">
           <Carousel
@@ -39,20 +38,17 @@ const zabawki = () => {
               <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
             }
           >
-            <img src={pinguin1} alt="pinguin1" />
-            <img src={pinguin2} alt="pinguin2" />
-            <img src={pinguin3} alt="pinguin3" />
+            {images.map((img, index) => {
+              return <img src={img} alt={name} key={index} />;
+            })}
           </Carousel>
         </section>
       </SRLWrapper>
       <div className="textAndDetails">
         <section className="textZabawki">
           <p>
-            Maskotka PINGWIN ręcznie wykonana na szydełku. Wykorzystane
-            materiały (bawełna, poliakryl, kulki silikonowe) są bezpieczne nawet
-            dla najmłodyszch. PINGWIN wygląda przyjaźnie przez co maluchy
-            chętnie się nią bawią.
-            <br /> <br /> Wykonany przeze mnie pluszak nie zniszczy się tak
+            {description}
+            <br /> <br /> Wykonany przeze mnie produkt nie zniszczy się tak
             szybko jak to nie raz bywa z tymi kupionymi w markecie. Wyrób jest
             wytrzymały (nie kurczy się i nie mechaci). Można prać w pralce w
             30°.
@@ -63,20 +59,16 @@ const zabawki = () => {
         </section>
         <section className="detailsZabawki">
           <p>
-            CENA: <strong> 50 zł</strong>
+            CENA: <strong> {price}</strong>
           </p>
           <p>
-            ROZMIAR: <strong> ok. 15cm</strong>
+            ROZMIAR: <strong> {size}</strong>
           </p>
           <p>
-            PIELĘGNACJA: <strong> Pranie - 30°</strong>
+            PIELĘGNACJA: <strong> {wash}</strong>
           </p>
           <p>
-            MATERIAŁ:{" "}
-            <strong>
-              {" "}
-              bawełna, poliakryl, <br /> kulki silikonowe(wypełnienie)
-            </strong>{" "}
+            MATERIAŁ: <strong> {material}</strong>{" "}
           </p>
         </section>
       </div>

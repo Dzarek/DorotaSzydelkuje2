@@ -228,7 +228,7 @@ video {
     width: 40%;
     height: 100%;
     color: rgb(214, 213, 213);
-    font-size: 40px;
+    font-size: 30px;
     background-color: rgba(0, 0, 0, 0.582);
     padding: 40px;
     border-radius: 20px;
@@ -287,7 +287,7 @@ video {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 40px;
+    font-size: 32px;
     text-transform: uppercase;
     width: 100%;
 }

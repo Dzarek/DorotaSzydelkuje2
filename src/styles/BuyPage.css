@@ -21,7 +21,7 @@
     position: relative;
     left: 0vw;
     top: 0vh;
-    min-height: 300vh;
+    /* min-height: 400vh; */
 }
 
 
@@ -34,15 +34,15 @@
     width: 60vw;
     margin: 0 auto;
     flex-wrap: wrap;
-    position: absolute;
+    position: relative;
     left: 0vw;
     top: 0vh;
     animation: startCircle 1s linear 1 forwards;
 }
 
-.toBuyNow2 ul {
-    position: static;
-    animation: startCircle 1s linear 1 forwards;
+.toBuyNow ul {
+    align-items: center;
+    margin: 0;
 }
 
 
@@ -183,18 +183,18 @@
 
 .myForm2 input {
     width: 46%;
-    height: 4vh;
+    height: 2vh;
     margin: 1vh 2%;
     padding: 15px;
-    font-size: 16px;
+    font-size: 12px;
     /* text-align: center; */
     letter-spacing: 2px;
 }
 
 .myForm2 textarea {
     width: 96%;
-    height: 20vh;
-    font-size: 18px;
+    height: 15vh;
+    font-size: 15px;
     padding: 10px;
 }
 
@@ -203,12 +203,12 @@
     margin: 1vh 0;
     text-align: left;
     display: inline-block;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 .myForm2 .labelCheck input {
-    height: 22px;
-    width: 22px;
+    height: 18px;
+    width: 18px;
     color: #222;
     cursor: pointer;
     display: inline-block;
@@ -217,7 +217,7 @@
 }
 
 .myForm2 h3 {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -233,15 +233,18 @@
 
 .myForm2 button {
     margin-top: 1vh;
-    width: 25vw;
+    width: 15vw;
     height: 5vh;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.644);
     color: #222;
     border: none;
     box-shadow: 0 0 2px 1px white;
     transition: .4s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .myForm2 button:hover {
@@ -250,11 +253,11 @@
 }
 
 .aboutAndBuy .aboutAndBuyText {
-    height: 50vh;
+    height: 45%;
     width: 100%;
     border: 3px solid white;
-    margin-bottom: 3vh;
-    padding: 10px;
+    margin-bottom: 2vh;
+    padding: 5px 20px;
     background-color: rgba(18, 18, 19, 0.2);
     text-align: left;
     line-height: 1.5;
@@ -262,7 +265,7 @@
 
 .aboutAndBuy .aboutAndBuyText span h3 {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -272,7 +275,7 @@
 
 .aboutAndBuy .aboutAndBuyText span p {
     color: white;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 @media (orientation:portrait) and (min-width: 320px),

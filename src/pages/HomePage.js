@@ -1,31 +1,22 @@
 import React from "react";
 import "../styles/HomePage.css";
 import { NavLink } from "react-router-dom";
-
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
-// import pinguin from "../images/Products/pluszak.png";
-// import sheep from "../images/Products/sheep.png";
-// import krolik from "../images/Products/królik.png";
-// import rabbit from "../images/Products/rabbit.png";
+import yarnBall from "../images/yarnBall.png";
+import catYarn from "../images/catYarn.gif";
+import videoBg from "../images/backgroundVideo2.mp4";
 
 import pinguin from "../images/Products/pluszak.png";
-import krolik from "../images/Products/królik.png";
-import owieczka1 from "../images/Products/bezTła/owieczka1-removebg-preview.png";
-import króliczka1 from "../images/Products/bezTła/króliczka1-removebg-preview.png";
-import hipcio1 from "../images/Products/bezTła/hipcio1-removebg-preview.png";
-import misiekBiały1 from "../images/Products/bezTła/misiekBiały3-removebg-preview.png";
-import piesek1 from "../images/Products/bezTła/piesek3-removebg-preview.png";
-
 import koc from "../images/Products/koc.png";
 import kosz from "../images/Products/kosz.png";
 import poduszka from "../images/Products/poduszka.png";
 import pufa from "../images/Products/pufa.png";
 
-import yarnBall from "../images/yarnBall.png";
-import catYarn from "../images/catYarn.gif";
-import videoBg from "../images/backgroundVideo2.mp4";
+import { produkt } from "../data";
+
+const linksZabawki = produkt.filter((item) => item.type === "pluszak");
 
 const HomePage = () => {
   return (
@@ -37,7 +28,6 @@ const HomePage = () => {
           muted
           loop
           playsInline
-          // nocontrols
           type="video/mp4"
         ></video>
         <div className="videoFilter"></div>
@@ -90,15 +80,11 @@ const HomePage = () => {
             autoPlay={2500}
             animationSpeed={1000}
             slidesPerPage={2}
-            // itemWidth={800}
           >
-            <img src={hipcio1} alt="hipcio1" />
-            <img src={krolik} alt="krolik" />
-            <img src={owieczka1} alt="owieczka1" />
-            <img src={piesek1} alt="piesek1" />
-            <img src={króliczka1} alt="króliczka1" />
-            <img src={pinguin} alt="pinguin" />
-            <img src={misiekBiały1} alt="misiekBiały1" />
+            {linksZabawki.map((link) => {
+              const { id, name, img } = link;
+              return <img src={img} alt={name} key={id} />;
+            })}
           </Carousel>
         </span>
       </div>
