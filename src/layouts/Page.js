@@ -21,6 +21,7 @@ import PiesekPage from "../pages/orderpages/zabawki/PiesekPage";
 import BialyMisPage from "../pages/orderpages/zabawki/BialyMisPage";
 import OsmiorniczkaPage from "../pages/orderpages/zabawki/OsmiorniczkaPage";
 import KrolikPage from "../pages/orderpages/zabawki/KrolikPage";
+import DuzyOsiolPage from "../pages/orderpages/zabawki/DuzyOsiolPage";
 //PUFY
 import PufaPage from "../pages/orderpages/pufy/PufaPage";
 //KOCE
@@ -48,6 +49,7 @@ const Page = () => {
         <Route path="/bialymis" component={BialyMisPage} />
         <Route path="/osmiorniczka" component={OsmiorniczkaPage} />
         <Route path="/krolik" component={KrolikPage} />
+        <Route path="/duzyOsiol" component={DuzyOsiolPage} />
         {/* PUFY */}
         <Route path="/pufa" component={PufaPage} />
         {/* KOCE */}

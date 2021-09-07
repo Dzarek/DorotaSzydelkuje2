@@ -48,6 +48,15 @@ import osmiorniczka2 from "./images/Products/ośmiorniczka/osmiorniczka2.jpg";
 import osmiorniczka3 from "./images/Products/ośmiorniczka/osmiorniczka3.jpg";
 import osmiorniczka4 from "./images/Products/ośmiorniczka/osmiorniczka4.jpg";
 import osmiorniczka5 from "./images/Products/ośmiorniczka/osmiorniczka5.jpg";
+//duży osioł
+import duzyOsiol1 from "./images/Products/duzyOsiol/dOsiol1.jpg";
+import duzyOsiol2 from "./images/Products/duzyOsiol/dOsiol2.jpg";
+import duzyOsiol3 from "./images/Products/duzyOsiol/dOsiol3.jpg";
+import duzyOsiol4 from "./images/Products/duzyOsiol/dOsiol4.jpg";
+import duzyOsiol5 from "./images/Products/duzyOsiol/dOsiol5.jpg";
+import duzyOsiol6 from "./images/Products/duzyOsiol/dOsiol6.jpg";
+import duzyOsiol7 from "./images/Products/duzyOsiol/dOsiol7.jpg";
+import duzyOsiol8 from "./images/Products/duzyOsiol/dOsiol8.jpg";
 //pufa
 import pufa1 from "./images/Products/pufa/pufa1.jpg";
 import pufa2 from "./images/Products/pufa/pufa2.jpg";
@@ -76,6 +85,7 @@ import osmiorniczkaP from "./images/Products/bezTła/osmiorniczka1-removebg-prev
 import krolikP from "./images/Products/bezTła/krolik1-removebg-preview.png";
 import szaryKocykP from "./images/Products/bezTła/kocyk1-removebg-preview.png";
 import pufaP from "./images/Products/bezTła/pufa6-removebg-preview.png";
+import duzyOsiolP from "./images/Products/bezTła/dOsiol1-removebg-preview.png";
 
 export const produkt = [
   {
@@ -207,7 +217,7 @@ export const produkt = [
     size: "53 cm",
     wash: "Pranie - 30°",
     material: "poliester, kulki silikonowe (wypełnienie)",
-    ready: true,
+    ready: false,
     description:
       "Maskotka PIESEK ręcznie wykonana na szydełku. Wykorzystane materiały (poliester, kulki silikonowe) są bezpieczne nawet dla najmłodyszch. Pluszak posiada również elementy tzw. bezpieczne oczka. PIESEK wygląda przyjaźnie przez co maluchy chętnie się nią bawią.",
     images: [piesek1, piesek2, piesek3, piesek4, piesek5, piesek6],
@@ -278,5 +288,30 @@ export const produkt = [
     url: `/szaryKocyk`,
     img: szaryKocykP,
     imgOthers: szaryKocyk1,
+  },
+  {
+    id: 12,
+    name: "DUŻY OSIOŁ",
+    type: "pluszak",
+    price: "250 zł",
+    size: "65 cm",
+    wash: "Pranie - 30°",
+    material: "poliester, kulki silikonowe (wypełnienie)",
+    ready: false,
+    description:
+      "Maskotka DUŻY OSIOŁ ręcznie wykonana na szydełku. Wykorzystane materiały (poliester, kulki silikonowe) są bezpieczne nawet dla najmłodyszch. DUŻY OSIOŁ wygląda przyjaźnie przez co maluchy chętnie się nią bawią.",
+    images: [
+      duzyOsiol1,
+      duzyOsiol2,
+      duzyOsiol3,
+      duzyOsiol4,
+      duzyOsiol5,
+      duzyOsiol6,
+      duzyOsiol7,
+      duzyOsiol8,
+    ],
+    url: `/duzyOsiol`,
+    img: duzyOsiolP,
+    imgOthers: duzyOsiol1,
   },
 ];
