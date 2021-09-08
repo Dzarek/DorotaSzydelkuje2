@@ -3,9 +3,22 @@ import "../styles/App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Navigation from "./Navigation";
-import Page from "./Page";
 import Footer from "./Footer";
 import CookieConsent from "react-cookie-consent";
+import { Route, Switch } from "react-router-dom";
+import { ScrollToTop } from "react-router-scroll-to-top";
+
+//NAWIGACJA
+import HomePage from "../pages/HomePage";
+import BuyPage from "../pages/BuyPage";
+import OrderPage from "../pages/OrderPage";
+import AboutMePage from "../pages/AboutMePage";
+import ContactPage from "../pages/ContactPage";
+import CookiePage from "../pages/CookiePage";
+import ErrorPage from "../pages/ErrorPage";
+
+//ZABAWKI
+import AllProducts from "../pages/orderpages/zabawki/AllProducts";
 
 class App extends Component {
   render() {
@@ -14,12 +27,22 @@ class App extends Component {
         <Router basename={process.env.PUBLIC_URL}>
           <div className="appBg"></div>
           <div className="App">
-            <header>
-              {/* {<Header />} */}
-              {<Navigation />}
-            </header>
+            <header>{<Navigation />}</header>
             <main>
-              <section className="page">{<Page />}</section>
+              <section className="page">
+                <ScrollToTop />
+                <Switch>
+                  {/* NAWIGACJA */}
+                  <Route path="/" exact component={HomePage} />
+                  <Route exact path="/buyNow" component={BuyPage} />
+                  <Route exact path="/order/" component={OrderPage} />
+                  <Route exact path="/aboutMe" component={AboutMePage} />
+                  <Route exact path="/contact" component={ContactPage} />
+                  <Route exact path="/cookie" component={CookiePage} />
+                  <Route exact path="/order/:slug" component={AllProducts} />
+                  <Route component={ErrorPage} />
+                </Switch>
+              </section>
             </main>
             <footer>{<Footer />}</footer>
             <CookieConsent
@@ -29,7 +52,6 @@ class App extends Component {
               style={{
                 background: "rgba(0,0,0, .8)",
                 fontSize: "24px",
-                // height: "30vh",
                 display: "flex",
                 justifyContent: "space-around",
                 alignItems: "center",
@@ -37,7 +59,6 @@ class App extends Component {
               buttonStyle={{
                 color: "#222",
                 fontSize: "18px",
-                // margin: "0 10vw 0 0",
                 backgroundColor: "pink",
                 padding: "10px",
                 boxShadow: "0 0 2px 2px pink",

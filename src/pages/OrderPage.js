@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/OrderPage.css";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { produkt } from "../data";
 
 const linksZabawki = produkt.filter((item) => item.type === "pluszak");
@@ -136,13 +137,13 @@ class OrderPage extends Component {
             </span>
             <ul>
               {linksZabawki.map((link) => {
-                const { id, name, url, img } = link;
+                const { id, name, slug, img } = link;
                 return (
                   <li>
-                    <NavLink key={id} className="link" to={url}>
+                    <Link key={id} className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
-                    </NavLink>
+                    </Link>
                   </li>
                 );
               })}
@@ -165,13 +166,13 @@ class OrderPage extends Component {
             </span>
             <ul>
               {linksPufy.map((link) => {
-                const { id, name, url, img } = link;
+                const { id, name, slug, img } = link;
                 return (
                   <li>
-                    <NavLink key={id} className="link" to={url}>
+                    <Link key={id} className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
-                    </NavLink>
+                    </Link>
                   </li>
                 );
               })}
@@ -194,10 +195,10 @@ class OrderPage extends Component {
             </span>
             <ul>
               {linksKoce.map((link) => {
-                const { id, name, url, img } = link;
+                const { id, name, slug, img } = link;
                 return (
                   <li>
-                    <NavLink key={id} className="link" to={url}>
+                    <NavLink key={id} className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
                     </NavLink>

@@ -1,13 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../../styles/ZabawkiPage.css";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-
 import { produkt } from "../../../data";
-const linksZabawki = produkt.filter((item) => item.type === "pluszak");
 
 const OthersZabawki = () => {
   return (
@@ -33,14 +31,18 @@ const OthersZabawki = () => {
             <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
           }
         >
-          {linksZabawki.map((link) => {
-            const { id, name, url, imgOthers } = link;
+          {produkt.map((link) => {
+            const { id, name, slug, imgOthers } = link;
             return (
-              <li key={id}>
-                <NavLink to={url}>
+              <li
+                onClick={() => {
+                  window.location.reload();
+                }}
+              >
+                <Link key={id} to={`/order/${slug}`}>
                   <img src={imgOthers} alt={name} />
                   <p>{name}</p>
-                </NavLink>
+                </Link>
               </li>
             );
           })}
