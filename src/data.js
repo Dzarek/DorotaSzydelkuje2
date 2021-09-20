@@ -72,7 +72,16 @@ import szaryKocyk2 from "./images/Products/szaryKocyk/kocyk2.jpg";
 import szaryKocyk3 from "./images/Products/szaryKocyk/kocyk3.jpg";
 import szaryKocyk4 from "./images/Products/szaryKocyk/kocyk4.jpg";
 import szaryKocyk5 from "./images/Products/szaryKocyk/kocyk5.jpg";
-
+//maly osiol
+import mOsiol1 from "./images/Products/malyOsiol/mOsiol1.jpg";
+import mOsiol2 from "./images/Products/malyOsiol/mOsiol1.jpg";
+import mOsiol3 from "./images/Products/malyOsiol/mOsiol1.jpg";
+//mysza
+import mysza1 from "./images/Products/mysza/mysza1.jpg";
+import mysza2 from "./images/Products/mysza/mysza2.jpg";
+import mysza3 from "./images/Products/mysza/mysza3.jpg";
+import mysza4 from "./images/Products/mysza/mysza4.jpg";
+import mysza5 from "./images/Products/mysza/mysza5.jpg";
 //orderPage
 import pinguinP from "./images/Products/pluszak.png";
 import zajaczekP from "./images/Products/królik.png";
@@ -86,6 +95,8 @@ import krolikP from "./images/Products/bezTła/krolik1-removebg-preview.png";
 import szaryKocykP from "./images/Products/bezTła/kocyk1-removebg-preview.png";
 import pufaP from "./images/Products/bezTła/pufa6-removebg-preview.png";
 import duzyOsiolP from "./images/Products/bezTła/dOsiol1-removebg-preview.png";
+import mOsiolP from "./images/Products/bezTła/mOsiol3-removebg-preview.png";
+import myszaP from "./images/Products/bezTła/mysza5-removebg-preview.png";
 
 export const produkt = [
   {
@@ -312,5 +323,37 @@ export const produkt = [
     ],
     img: duzyOsiolP,
     imgOthers: duzyOsiol1,
+  },
+  {
+    id: 13,
+    name: "MAŁY OSIOŁ",
+    slug: "maly-osiol",
+    type: "pluszak",
+    price: "100 zł",
+    size: "32 cm",
+    wash: "Pranie - 30°",
+    material: "poliester, kulki silikonowe (wypełnienie)",
+    ready: true,
+    description:
+      "Maskotka MAŁY OSIOŁ ręcznie wykonana na szydełku. Wykorzystane materiały (poliester, kulki silikonowe) są bezpieczne nawet dla najmłodyszch. MAŁY OSIOŁ wygląda przyjaźnie przez co maluchy chętnie się nią bawią.",
+    images: [mOsiol1, mOsiol2, mOsiol3],
+    img: mOsiolP,
+    imgOthers: mOsiol1,
+  },
+  {
+    id: 14,
+    name: "MYSZA",
+    slug: "mysza",
+    type: "pluszak",
+    price: "40 zł",
+    size: "18 cm",
+    wash: "Pranie - 30°",
+    material: "poliester, kulki silikonowe (wypełnienie)",
+    ready: false,
+    description:
+      "Maskotka MYSZA ręcznie wykonana na szydełku. Wykorzystane materiały (poliester, kulki silikonowe) są bezpieczne nawet dla najmłodyszch. MYSZA wygląda przyjaźnie przez co maluchy chętnie się nią bawią.",
+    images: [mysza1, mysza2, mysza3, mysza4, mysza5],
+    img: myszaP,
+    imgOthers: mysza1,
   },
 ];
