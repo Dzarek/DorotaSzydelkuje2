@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../../styles/ZabawkiPage.css";
-import colors from "../../../images/Products/colors.jpg";
+import colors from "../../../images/Products/colors.png";
 
 const ColorKurier = () => {
   return (
