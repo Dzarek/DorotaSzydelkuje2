@@ -72,6 +72,13 @@ import szaryKocyk2 from "./images/Products/szaryKocyk/kocyk2.jpg";
 import szaryKocyk3 from "./images/Products/szaryKocyk/kocyk3.jpg";
 import szaryKocyk4 from "./images/Products/szaryKocyk/kocyk4.jpg";
 import szaryKocyk5 from "./images/Products/szaryKocyk/kocyk5.jpg";
+// różowy kocyk
+import rKocyk1 from "./images/Products/rozowyKocyk/rKocyk1.jpg";
+import rKocyk2 from "./images/Products/rozowyKocyk/rKocyk2.jpg";
+import rKocyk3 from "./images/Products/rozowyKocyk/rKocyk3.jpg";
+import rKocyk4 from "./images/Products/rozowyKocyk/rKocyk4.jpg";
+import rKocyk5 from "./images/Products/rozowyKocyk/rKocyk5.jpg";
+import rKocyk6 from "./images/Products/rozowyKocyk/rKocyk6.jpg";
 //maly osiol
 import mOsiol1 from "./images/Products/malyOsiol/mOsiol1.jpg";
 import mOsiol2 from "./images/Products/malyOsiol/mOsiol1.jpg";
@@ -97,6 +104,7 @@ import pufaP from "./images/Products/bezTła/pufa6-removebg-preview.png";
 import duzyOsiolP from "./images/Products/bezTła/dOsiol1-removebg-preview.png";
 import mOsiolP from "./images/Products/bezTła/mOsiol3-removebg-preview.png";
 import myszaP from "./images/Products/bezTła/mysza5-removebg-preview.png";
+import rKocykP from "./images/Products/bezTła/rKocyk1-removebg-preview.png";
 
 export const produkt = [
   {
@@ -355,5 +363,21 @@ export const produkt = [
     images: [mysza1, mysza2, mysza3, mysza4, mysza5],
     img: myszaP,
     imgOthers: mysza1,
+  },
+  {
+    id: 15,
+    name: "RÓŻOWY KOCYK",
+    slug: "różowy-kocyk",
+    type: "koce",
+    price: "120 zł",
+    size: "100 cm x 65 cm",
+    wash: "Pranie - 30°",
+    material: "bawełna, poliester",
+    ready: false,
+    description:
+      "RÓŻOWY KOCYK ręcznie wykonany na szydełku. Wykorzystane materiały (bawełna, poliakryl) są bezpieczne nawet dla najmłodyszch. RÓŻOWY KOCYK jest milutki i cieplutki, świetnie otuli maluchy do snu. Posiada wyszyte imię właściciela.",
+    images: [rKocyk1, rKocyk2, rKocyk3, rKocyk4, rKocyk5, rKocyk6],
+    img: rKocykP,
+    imgOthers: rKocyk1,
   },
 ];
