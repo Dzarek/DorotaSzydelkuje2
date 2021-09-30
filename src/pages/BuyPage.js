@@ -3,9 +3,8 @@ import "../styles/BuyPage.css";
 import MyFrom2 from "../components/MyForm2";
 import Carousel from "react-elastic-carousel";
 
-import { produkt } from "../data";
-
-const readyProdukt = produkt.filter((item) => item.ready === true);
+// import { produkt } from "../data";
+import Client from "../Contentful";
 
 class BuyPage extends Component {
   state = {
@@ -15,7 +14,63 @@ class BuyPage extends Component {
     pSize: 0,
     pWash: "",
     pMaterial: "",
+    products: [],
   };
+
+  // getData;
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "dorotaSzydelkuje",
+        order: "sys.createdAt",
+      });
+      let products = response.items;
+      products = products.map((item) => {
+        let {
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+        } = item.fields;
+        let { id } = item.sys;
+        let img = item.fields.img.fields.file.url;
+        let imgOthers = item.fields.imgOthers.fields.file.url;
+        let images = item.fields.images;
+        images = images.map((image) => {
+          return image.fields.file.url;
+        });
+        return {
+          id,
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+          img,
+          imgOthers,
+          images,
+        };
+      });
+      this.setState({
+        products,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
 
   handleChangeState = () => {
     this.setState({
@@ -24,6 +79,9 @@ class BuyPage extends Component {
   };
 
   handleClickFind = (name) => {
+    const workData = this.state.products;
+    const readyProdukt = workData.filter((item) => item.ready === true);
+
     let buyProdukt = readyProdukt.find((item) => {
       return item.name === name;
     });
@@ -38,6 +96,8 @@ class BuyPage extends Component {
     });
   };
   render() {
+    const workData = this.state.products;
+    const readyProdukt = workData.filter((item) => item.ready === true);
     return (
       <>
         <div className="buyPage">

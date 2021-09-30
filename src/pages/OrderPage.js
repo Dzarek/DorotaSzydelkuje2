@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import "../styles/OrderPage.css";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { produkt } from "../data";
-
-const linksZabawki = produkt.filter((item) => item.type === "pluszak");
-const linksPufy = produkt.filter((item) => item.type === "pufy");
-const linksKoce = produkt.filter((item) => item.type === "koce");
+// import { produkt } from "../data";
+import Client from "../Contentful";
 
 class OrderPage extends Component {
   state = {
@@ -16,7 +13,64 @@ class OrderPage extends Component {
     activeKoce: false,
     activePoduszki: false,
     activeKosze: false,
+    products: [],
   };
+
+  // getData;
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "dorotaSzydelkuje",
+        order: "sys.createdAt",
+      });
+      let products = response.items;
+      products = products.map((item) => {
+        let {
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+        } = item.fields;
+        let { id } = item.sys;
+        let img = item.fields.img.fields.file.url;
+        let imgOthers = item.fields.imgOthers.fields.file.url;
+        let images = item.fields.images;
+        images = images.map((image) => {
+          return image.fields.file.url;
+        });
+        return {
+          id,
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+          img,
+          imgOthers,
+          images,
+        };
+      });
+      this.setState({
+        products,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
+
   handleChangeState = () => {
     this.setState({
       active: true,
@@ -59,6 +113,12 @@ class OrderPage extends Component {
   };
 
   render() {
+    const workData = this.state.products;
+    console.log(workData);
+
+    const linksZabawki = workData.filter((item) => item.type === "pluszak");
+    const linksPufy = workData.filter((item) => item.type === "pufy");
+    const linksKoce = workData.filter((item) => item.type === "koce");
     return (
       <>
         <div className="orderBg"> </div>

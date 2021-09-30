@@ -5,9 +5,11 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import { produkt } from "../../../data";
+// import { produkt } from "../../../data";
+import { useGlobalContext } from "../../../data2";
 
 const OthersZabawki = () => {
+  const { contentProduct } = useGlobalContext();
   return (
     <section className="othersZabawki">
       <h2>Zobacz inne moje rękodzieła</h2>
@@ -31,7 +33,7 @@ const OthersZabawki = () => {
             <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
           }
         >
-          {produkt.map((link) => {
+          {contentProduct.map((link) => {
             const { id, name, slug, imgOthers } = link;
             return (
               <li

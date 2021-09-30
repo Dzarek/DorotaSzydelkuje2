@@ -14,11 +14,12 @@ import kosz from "../images/Products/kosz.png";
 import poduszka from "../images/Products/poduszka.png";
 import pufa from "../images/Products/pufa.png";
 
-import { produkt } from "../data";
-
-const linksZabawki = produkt.filter((item) => item.type === "pluszak");
+// import { produkt } from "../data";
+import { useGlobalContext } from "../data2";
 
 const HomePage = () => {
+  const { contentProduct } = useGlobalContext();
+  const readyZabawki = contentProduct.filter((item) => item.ready === true);
   return (
     <>
       <div className="home">
@@ -81,7 +82,7 @@ const HomePage = () => {
             animationSpeed={1000}
             slidesPerPage={2}
           >
-            {linksZabawki.map((link) => {
+            {readyZabawki.map((link) => {
               const { id, name, img } = link;
               return <img src={img} alt={name} key={id} />;
             })}
