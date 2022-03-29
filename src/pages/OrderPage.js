@@ -81,6 +81,16 @@ class OrderPage extends Component {
       activeKosze: false,
     });
   };
+  handleChangeState2 = () => {
+    this.setState({
+      active: true,
+      activePluszaki: false,
+      activePufy: false,
+      activeKoce: false,
+      activePoduszki: false,
+      activeKosze: false,
+    });
+  };
   handleChangeStatePluszaki = () => {
     this.handleChangeState();
     this.setState({
@@ -186,7 +196,7 @@ class OrderPage extends Component {
           <div className="orderList pluszakiList">
             <button
               style={{ color: "black" }}
-              onClick={this.handleChangeState}
+              onClick={this.handleChangeState2}
               className="buttonBuyPage"
             >
               <i class="far fa-times-circle"></i>
@@ -216,7 +226,7 @@ class OrderPage extends Component {
           <div className="orderList pufyList">
             <button
               style={{ color: "black" }}
-              onClick={this.handleChangeState}
+              onClick={this.handleChangeState2}
               className="buttonBuyPage"
             >
               <i class="far fa-times-circle"></i>
@@ -245,7 +255,7 @@ class OrderPage extends Component {
           <div className="orderList koceList">
             <button
               style={{ color: "black" }}
-              onClick={this.handleChangeState}
+              onClick={this.handleChangeState2}
               className="buttonBuyPage"
             >
               <i class="far fa-times-circle"></i>
@@ -274,7 +284,7 @@ class OrderPage extends Component {
           <div className="orderList poduszkiList">
             <button
               style={{ color: "black" }}
-              onClick={this.handleChangeState}
+              onClick={this.handleChangeState2}
               className="buttonBuyPage"
             >
               <i class="far fa-times-circle"></i>
@@ -289,7 +299,7 @@ class OrderPage extends Component {
           <div className="orderList koszeList">
             <button
               style={{ color: "black" }}
-              onClick={this.handleChangeState}
+              onClick={this.handleChangeState2}
               className="buttonBuyPage"
             >
               <i class="far fa-times-circle"></i>
