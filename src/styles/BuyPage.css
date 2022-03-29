@@ -1,8 +1,8 @@
 .buyPage h1 {
-    color: white;
-    font-size: 40px;
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 15vh auto 10vh;
+    color: rgb(255, 255, 255);
 }
 
 .buttonBuyPage {
@@ -10,7 +10,7 @@
 }
 
 .buyPage .activeH1Buy {
-    font-size: 34px;
+    font-size: 1.8rem;
     width: 60vw;
     margin: 15vh auto 10vh 0vw;
     animation: startCircle 1s linear 1 forwards;
@@ -21,7 +21,6 @@
     position: relative;
     left: 0vw;
     top: 0vh;
-    /* min-height: 400vh; */
 }
 
 
@@ -31,7 +30,7 @@
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
-    width: 60vw;
+    width: 90vw;
     margin: 0 auto;
     flex-wrap: wrap;
     position: relative;
@@ -43,6 +42,7 @@
 .toBuyNow ul {
     align-items: center;
     margin: 0;
+    width: 60vw;
 }
 
 
@@ -51,23 +51,22 @@
 .toBuyNow2 ul li {
     width: 300px;
     height: 400px;
-    background-color: rgba(3, 3, 3, 0.7);
-    background-color: rgba(47, 6, 42, 0.8);
+    background-color: rgba(35, 22, 49, 0.705);
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin: 50px;
     text-decoration: none;
     list-style: none;
-    box-shadow: 0 0 15px 5px white;
+    box-shadow: 0 0 10px 2px white;
     position: relative;
     transition: .5s;
     border-radius: 10px;
-    border: 4px solid white;
+    border: 2px solid white;
 }
 
 .toBuyNow ul li:hover,
 .toBuyNow2 ul li:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .toBuyNow ul li div,
@@ -75,15 +74,11 @@
     height: 300px;
     width: 100%;
     padding-top: .5%;
-    /* background-color: #444; */
-    /* border-radius: 20px; */
-
 }
 
 .toBuyNow ul li div img,
 .toBuyNow2 ul li div img {
-    border: 3px solid white;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .toBuyNow li p,
@@ -94,9 +89,7 @@
     width: 100%;
     height: 25%;
     color: white;
-    font-size: 30px;
-    background-color: rgba(3, 3, 3, 0.7);
-    background-color: rgba(47, 6, 42, 0.8);
+    font-size: 1.6rem;
     border-radius: 0 0 10px 10px;
     padding: 10px 0;
     cursor: pointer;
@@ -123,27 +116,27 @@
     margin: 0 auto;
     height: 95%;
     width: 100%;
-
 }
 
 .toBuyNow li .rec.rec-arrow,
 .toBuyNow2 li .rec.rec-arrow {
     transform: scale(.8);
-    border-radius: 0;
-    height: 60px;
-    width: 10px;
-    font-size: 20px;
-    background-color: rgba(22, 22, 22, 0.555);
+    height: 50px;
+    font-size: 2rem;
+    background-color: rgba(35, 22, 49, 0.705);
     color: white;
     position: absolute;
-    left: -1%;
+    left: 1.5%;
     z-index: 10;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    text-shadow: 2px 5px 2px black;
 }
 
 .toBuyNow li .rec.rec-arrow-right,
 .toBuyNow2 li .rec.rec-arrow-right {
-    left: 84%;
-
+    left: 81.5%;
+    border-radius: 10px 0 0 10px;
 }
 
 .toBuyNow li .rec.rec-arrow:hover,
@@ -153,28 +146,24 @@
 
 .toBuyNow li .rec.rec-arrow:disabled,
 .toBuyNow2 li .rec.rec-arrow:disabled {
-    background-color: rgba(255, 255, 255, 0.39);
+    background-color: transparent;
+    color: #aaa;
 }
 
 .aboutAndBuy {
     display: flex;
     flex-direction: column;
     position: fixed;
-    /* overflow: scroll; */
     right: 0vw;
     top: 0vh;
     height: 100vh;
     width: 40vw;
     padding: 10vh 5vw;
-    background-color: rgba(23, 24, 80, 0.2);
+    background-color: rgba(35, 22, 49, 0.705);
     animation: startCircle 1s linear 1 forwards;
 }
 
 .myForm2 {
-    /* position: absolute;
-    top: 15vh;
-    left: 50%;
-    transform: translateX(-50%); */
     color: white;
     width: 100%;
 
@@ -188,7 +177,6 @@
     margin: 1vh 2%;
     padding: 15px;
     font-size: 12px;
-    /* text-align: center; */
     letter-spacing: 2px;
 }
 
@@ -218,7 +206,7 @@
 }
 
 .myForm2 h3 {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 
@@ -229,7 +217,7 @@
 }
 
 .myForm2.cookieLink:hover {
-    color: rgb(57, 138, 230);
+    color: rgb(19, 26, 32);
 }
 
 .myForm2 button {
@@ -282,13 +270,13 @@
 @media (orientation:portrait) and (min-width: 320px),
 (orientation:landscape) and (max-width: 500px) {
     .buyPage h1 {
-        font-size: 28px;
+        font-size: 20px;
         margin: 12vh auto 5vh;
         width: 90vw;
     }
 
     .buyPage .activeH1Buy {
-        font-size: 24px;
+        font-size: 20px;
         width: 90vw;
         margin: 12vh auto 5vh;
     }
@@ -358,7 +346,7 @@
         height: 100vh;
         width: 100vw;
         padding: 10vh 5vw;
-        background-color: rgba(23, 24, 80, 0.95);
+        background-color: rgba(35, 22, 49, 1);
     }
 
     .buttonBuyPage {
@@ -380,19 +368,20 @@
         height: 5vh;
         margin: 1vh 2%;
         padding: 10px;
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 2px;
     }
 
     .myForm2 textarea {
         width: 96%;
-        height: 20vh;
+        height: 17vh;
         font-size: 14px;
         padding: 14px;
     }
 
     .myForm2 h3 {
-        font-size: 26px;
+        font-size: 20px;
+        margin-top: 3vh;
     }
 
 
@@ -400,11 +389,15 @@
         color: rgb(255, 163, 163);
     }
 
+    .myForm2 .labelCheck p {
+        font-size: 18px;
+    }
+
     .myForm2 button {
         margin-top: 2vh;
         width: 50vw;
         height: 5vh;
-        font-size: 18px;
+        font-size: 14px;
         text-transform: uppercase;
         background-color: rgba(255, 255, 255, 0.8);
         color: #222;
@@ -418,10 +411,11 @@
         margin-bottom: 2vh;
         padding: 5px;
         line-height: 1.3;
+        margin-top: 3vh;
     }
 
     .aboutAndBuy .aboutAndBuyText span h3 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .aboutAndBuy .aboutAndBuyText span p strong {
@@ -429,13 +423,13 @@
     }
 
     .aboutAndBuy .aboutAndBuyText span p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 @media (orientation:landscape) and (min-width: 501px) and (max-width: 1023px) {
     .buyPage h1 {
-        font-size: 28px;
+        font-size: 20px;
         margin: 12vh auto 5vh;
         width: 90vw;
     }
@@ -477,7 +471,7 @@
     .toBuyNow2 ul li {
         width: 40vw;
         height: 80vh;
-        font-size: 20px;
+        font-size: 16px;
         margin: 50px auto;
         position: relative;
     }
@@ -509,7 +503,7 @@
         height: 100vh;
         width: 100vw;
         padding: 10vh 5vw;
-        background-color: rgba(23, 24, 80, 0.95);
+        background-color: rgba(35, 22, 49, 1);
     }
 
     .buttonBuyPage {
@@ -538,17 +532,17 @@
 
     .myForm2 textarea {
         width: 96%;
-        height: 35vh;
+        height: 32vh;
         font-size: 14px;
         padding: 14px;
     }
 
     .myForm2 h3 {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .myForm2 .labelCheck p {
-        font-size: 20px;
+        font-size: 16px;
         margin: 0;
         line-height: 1;
     }
@@ -580,7 +574,7 @@
     }
 
     .aboutAndBuy .aboutAndBuyText span h3 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .aboutAndBuy .aboutAndBuyText span p strong {
@@ -588,7 +582,7 @@
     }
 
     .aboutAndBuy .aboutAndBuyText span p {
-        font-size: 20px;
-        margin-top: 4vh;
+        font-size: 16px;
+        margin-top: 5vh;
     }
 }

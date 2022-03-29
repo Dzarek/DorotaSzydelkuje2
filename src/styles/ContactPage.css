@@ -18,7 +18,7 @@
 }
 
 .myForm h1 {
-    font-size: 35px;
+    font-size: 1.8rem;
     margin-bottom: 5vh;
     width: 100%;
 }
@@ -29,7 +29,6 @@
     margin: 3vh 2vh;
     padding: 20px;
     font-size: 16px;
-    /* text-align: center; */
     letter-spacing: 2px;
 }
 
@@ -40,10 +39,6 @@
     padding: 20px;
 }
 
-/* .myForm .labelCheck {
-    font-size: 25px;
-    width: 32vw;
-} */
 
 .labelCheck input {
     height: 22px;
@@ -56,21 +51,22 @@
 }
 
 .labelCheck p {
-    width: 32vw;
+    width: 35vw;
     margin: 3vh 0;
     text-align: left;
     display: inline-block;
-    font-size: 25px;
+    font-size: 1.2rem;
 }
 
 .cookieLink {
-    color: rgb(51, 107, 170);
+    color: rgba(75, 107, 136, 0.911);
     text-decoration: none;
     font-weight: 700;
+    transition: 0.4s;
 }
 
 .cookieLink:hover {
-    color: rgb(57, 138, 230);
+    color: rgba(91, 135, 173, 0.911);
 }
 
 .myForm button {
@@ -84,6 +80,8 @@
     border: none;
     box-shadow: 0 0 2px 1px white;
     transition: .4s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .myForm button:hover {
@@ -130,7 +128,8 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    font-size: 30px;
+    align-items: center;
+    font-size: 1.5rem;
     font-weight: bold;
     width: 60%;
     text-transform: uppercase;
@@ -139,27 +138,25 @@
 }
 
 .social2 {
-    top: 28vh;
-    font-size: 35px;
+    top: 26vh;
 }
 
 .social3 {
-    top: 41vh;
+    top: 37vh;
     border-bottom: 4px #222 solid;
     padding-bottom: 30px;
 }
 
 .social4 {
     top: 55vh;
-    font-size: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .contactMedia img {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin-right: 50px;
 }
 
@@ -176,13 +173,13 @@
 }
 
 .social4 h1 {
-    font-size: 35px;
+    font-size: 1.8rem;
     margin: 0 auto 20px;
     color: #fff;
 }
 
 .social4 p {
-    font-size: 30px;
+    font-size: 1.6rem;
     text-align: center;
     line-height: 1.6;
 }
@@ -203,25 +200,24 @@
     padding: 0 100px;
     text-align: center;
     color: white;
-    /* margin: 0 auto; */
 
 }
 
 .privateCookie h1 {
-    font-size: 60px;
+    font-size: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 100px auto;
 }
 
 .privateCookie h2 {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 2px;
     margin: 30px auto;
 }
 
 .privateCookie p {
-    font-size: 30px;
+    font-size: 20px;
     margin: 3vh auto;
     width: 80%;
 }
@@ -251,9 +247,9 @@
     }
 
     .myForm h1 {
-        font-size: 30px;
-        margin-bottom: 3vh;
-        width: 100%;
+        font-size: 20px;
+        width: 90%;
+        margin: 2vh auto 1vh;
     }
 
     .myForm input {
@@ -283,7 +279,7 @@
         margin: 3vh auto;
         text-align: center;
         display: inline-block;
-        font-size: 23px;
+        font-size: 18px;
     }
 
 
@@ -291,7 +287,7 @@
         margin: 2vh;
         width: 60vw;
         height: 5vh;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .contactMedia {
@@ -327,14 +323,14 @@
     .social3,
     .social4 {
         top: 8vh;
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
         width: 90%;
     }
 
     .social2 {
         top: 20vh;
-        font-size: 35px;
+        font-size: 16px;
     }
 
     .social3 {
@@ -345,7 +341,7 @@
 
     .social4 {
         top: 50vh;
-        font-size: 20px;
+        font-size: 18px;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -370,13 +366,13 @@
     }
 
     .social4 h1 {
-        font-size: 30px;
+        font-size: 23px;
     }
 
     .social4 p {
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
-        line-height: 1.4;
+        line-height: 1.5;
         width: 90vw;
         margin: 0 auto;
     }
@@ -389,25 +385,25 @@
     }
 
     .privateCookie h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .privateCookie h2 {
-        font-size: 35px;
+        font-size: 25px;
         letter-spacing: 1px;
         margin: 30px auto;
     }
 
     .privateCookie p {
-        font-size: 24px;
+        font-size: 18px;
         margin: 3vh auto;
-        width: 80%;
+        width: 90%;
     }
 
     .privateCookie span {
         margin-top: 70px;
         border-top: none;
-        font-size: 18px;
+        font-size: 14px;
     }
 
 }
@@ -420,8 +416,8 @@
     }
 
     .myForm h1 {
-        font-size: 22px;
-        margin: 0 auto 1vh;
+        font-size: 16px;
+        margin: 7vh auto 1vh;
         width: 90%;
 
     }
@@ -437,7 +433,7 @@
 
     .myForm textarea {
         width: 42vw;
-        height: 25vh;
+        height: 20vh;
         font-size: 14px;
         padding: 10px;
     }
@@ -451,7 +447,7 @@
     .labelCheck p {
         width: 40vw;
         margin: 0vh;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .cookieLink {
@@ -465,10 +461,10 @@
     }
 
     .myForm button {
-        margin-top: 2vh;
+        margin-top: 5vh;
         width: 25vw;
         height: 7vh;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .social1,
@@ -483,7 +479,7 @@
 
     .social2 {
         top: 25vh;
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .social3 {
@@ -514,7 +510,7 @@
     }
 
     .social4 h1 {
-        font-size: 24px;
+        font-size: 20px;
         margin: 0 auto 10px;
     }
 
@@ -530,7 +526,6 @@
         padding: 0 100px;
         text-align: center;
         color: white;
-        /* margin: 0 auto; */
     }
 
     .privateCookie h1 {

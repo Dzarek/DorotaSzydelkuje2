@@ -5,14 +5,14 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 import yarnBall from "../images/yarnBall.png";
-import catYarn from "../images/catYarn.gif";
+// import catYarn from "../images/catYarn.gif";
 import videoBg from "../images/backgroundVideo2.mp4";
 
-import pinguin from "../images/Products/pluszak.png";
-import koc from "../images/Products/koc.png";
+import pinguin from "../images/Products/bezTła/piesek3-removebg-preview.png";
+import koc from "../images/Products/bezTła/kocyk1-removebg-preview.png";
 import kosz from "../images/Products/kosz.png";
 import poduszka from "../images/Products/poduszka.png";
-import pufa from "../images/Products/pufa.png";
+import pufa from "../images/Products/bezTła/pufa6-removebg-preview.png";
 
 // import { produkt } from "../data";
 import { useGlobalContext } from "../data2";
@@ -34,6 +34,10 @@ const HomePage = () => {
         <div className="videoFilter"></div>
         <div className="begin">
           <h1>Dorota Szydełkuje</h1>
+          <div className="beginLineContainer">
+            <img className="yarnBall" src={yarnBall} alt="yarnBall" />
+            <div className="beginLine"></div>
+          </div>
           <p>
             Jeśli szukasz czegoś oryginalnego i nieprzeciętnego, <br /> czegoś
             co jest milutkie i cieplutkie, <br /> wyjątkowego ubrania, zabawki
@@ -41,8 +45,8 @@ const HomePage = () => {
             <br /> jeśli kochasz włóczkę tak jak ja... <br /> zapraszam do mojej
             oferty<i className="fas fa-smile-beam"></i>
           </p>
+          <img className="yarnBallMobile" src={yarnBall} alt="yarnBall" />
         </div>
-        <img className="yarnBall" src={yarnBall} alt="yarnBall" />
       </div>
 
       <div className="home2">
@@ -125,7 +129,7 @@ const HomePage = () => {
           spersonalizuj i wybierz kolor taki jaki Tobie odpowiada!{" "}
           <i className="far fa-smile-wink"></i>{" "}
         </p>
-        <img className="catYarn" src={catYarn} alt="catYarn" />
+        {/* <img className="catYarn" src={catYarn} alt="catYarn" /> */}
       </div>
     </>
   );

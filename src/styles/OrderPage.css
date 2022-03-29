@@ -9,11 +9,10 @@
     border-radius: 30%;
     transform-origin: left -100px;
     animation: animate 10s linear infinite, startCircle 2s linear 1 forwards;
-    font-size: 28px;
     color: white;
     background-color: rgba(34, 45, 66, 0.493);
     border: 2px solid white;
-    box-shadow: 0 0 10px 2px white;
+    box-shadow: 0 0 5px 1px white;
     cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
@@ -66,7 +65,8 @@
     transform: translate(-50%, -50%);
     color: white;
     text-transform: uppercase;
-    font-size: 38px;
+    font-size: 1.6rem;
+    font-family: var(--titleFont);
 }
 
 .chooseCategory2 {
@@ -76,7 +76,6 @@
     transform: translate(-50%, -50%);
     color: white;
     text-transform: uppercase;
-    font-size: 38px;
     animation: chooseCategoryMove 1s linear 1 forwards;
 }
 
@@ -88,7 +87,8 @@
         transform: translate(-50%, -50%);
         color: white;
         text-transform: uppercase;
-        font-size: 38px;
+        font-size: 1.6rem;
+        font-family: var(--titleFont);
 
     }
 
@@ -97,28 +97,28 @@
         top: 50%;
         left: 15%;
         transform: translate(-50%, -50%);
-        font-size: 25px;
+        font-size: 1.2rem;
         color: white;
         text-transform: uppercase;
+        font-family: var(--titleFont);
+
     }
 }
 
 
 .ring .pluszaki {
     animation-delay: -2s, 0s, 0s;
-    background-image: url(../images/Products/pluszak.png);
+    background-image: url(../images/Products/bezTła/piesek3-removebg-preview.png);
 }
 
 .ring .pufy {
     animation-delay: -4s, 0s, 0s;
-    background-image: url(../images/Products/pufa.png);
-    /* background-size: 120%; */
+    background-image: url(../images/Products/bezTła/pufa6-removebg-preview.png);
 }
 
 .ring .koce {
     animation-delay: -6s, 0s, 0s;
-    background-image: url(../images/Products/koc.png);
-    /* background-size: 110%; */
+    background-image: url(../images/Products/bezTła/kocyk1-removebg-preview.png);
 }
 
 
@@ -142,6 +142,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     padding: 5px 0;
+    font-family: 'Kalam', cursive;
 }
 
 .activeOrder button p {
@@ -164,7 +165,7 @@
     top: 30vh;
     left: 52%;
     color: #222;
-    font-size: 40px;
+    font-size: 2rem;
     z-index: 3;
     animation: startCircle 1s linear 1 forwards;
 }
@@ -178,7 +179,6 @@
     height: 100%;
     padding-bottom: 40vh;
     background-color: rgba(255, 255, 255, 0.226);
-    /* animation: startCircle 1s linear 1 forwards; */
 }
 
 .orderList span {
@@ -187,10 +187,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 15vh;
     background-color: rgba(0, 0, 0, 0.637);
     color: white;
-    font-size: 30px;
+    font-size: 1.4rem;
     padding: 3vh 5vw;
 }
 
@@ -201,7 +200,6 @@
     top: 40vh;
     left: 50%;
     width: 80%;
-    /* min-height: 100vh; */
     transform: translateX(-50%);
     justify-content: space-around;
     flex-wrap: wrap;
@@ -211,18 +209,16 @@
 .orderList li {
     width: 300px;
     height: 350px;
-    /* background-color: rgba(228, 228, 228, 0.76); */
     background-color: rgba(0, 0, 0, 0.431);
     color: white;
-    font-size: 20px;
     margin: 50px;
     text-decoration: none;
     list-style: none;
-    box-shadow: 0 0 15px 5px white;
+    box-shadow: 0 0 10px 5px white;
     position: relative;
     transition: .5s;
     border-radius: 10px;
-    border: 3px solid rgba(8, 47, 39, 0.719);
+    border: 3px solid var(--productBG);
 }
 
 
@@ -244,11 +240,14 @@
     left: 0;
     width: 100%;
     height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     padding: 10px 5px;
-    font-size: 40px;
+    font-size: 1.5rem;
     background-color: rgba(8, 47, 39, 0.719);
-    box-shadow: 0px -2px 2px 0 rgba(8, 47, 39, 0.719);
+    background-color: var(--productBG);
     border-radius: 0 0 10px 10px;
 }
 
@@ -261,12 +260,12 @@
 
 .easyOrder {
     color: white;
-    font-size: 30px;
     position: relative;
     height: 100vh;
     width: 100vw;
-    font-size: 32px;
-    color: blanchedalmond;
+    font-size: 1.2rem;
+    font-family: var(--titleFont);
+    font-weight: 400;
 }
 
 .easyOrder .easyOrderha {
@@ -305,7 +304,7 @@
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 30px;
+        font-size: 26px;
         padding: 0px;
     }
 
@@ -330,9 +329,9 @@
         transform: translateX(-50%);
         width: 95vw;
         color: #222;
-        font-size: 28px;
+        font-size: 22px;
         z-index: 3;
-        margin: 5vh auto;
+        margin: 10vh auto;
     }
 
     .orderList {
@@ -353,7 +352,7 @@
         height: auto;
         background-color: rgba(0, 0, 0, 0.637);
         color: white;
-        font-size: 24px;
+        font-size: 18px;
         padding: 3vh 5vw;
     }
 
@@ -361,13 +360,14 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        top: 50vh;
+        top: 55vh;
         left: 50%;
         transform: translateX(-50%);
         width: 100vw;
         min-height: 100vh;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding-bottom: 20vh;
     }
 
     .orderList li {
@@ -384,13 +384,13 @@
 
     .orderList li p {
         height: 20%;
-        font-size: 36px;
+        font-size: 24px;
         line-height: 150%;
     }
 
 
     .easyOrder {
-        font-size: 20px;
+        font-size: 12px;
     }
 
     .easyOrder .easyOrderha {
@@ -450,12 +450,12 @@
 
     .titleProducts {
         position: absolute;
-        top: 50vh;
+        top: 45vh;
         left: 50%;
         transform: translateX(-50%);
         width: 95vw;
         color: #222;
-        font-size: 28px;
+        font-size: 20px;
         z-index: 3;
         margin: 5vh auto;
     }
@@ -465,8 +465,7 @@
         top: 0vh;
         left: 0vw;
         width: 100vw;
-        min-height: 600vh;
-        padding: 20vh 0;
+        min-height: 700vh;
         background-color: rgba(255, 255, 255, 0.55);
     }
 
@@ -479,7 +478,7 @@
         height: auto;
         background-color: rgba(0, 0, 0, 0.637);
         color: white;
-        font-size: 22px;
+        font-size: 16px;
         padding: 3vh 5vw;
     }
 
@@ -494,6 +493,7 @@
         min-height: 100vh;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding-bottom: 20vh;
     }
 
     .orderList li {
@@ -511,7 +511,7 @@
 
     .orderList li p {
         height: 20%;
-        font-size: 26px;
+        font-size: 20px;
 
     }
 

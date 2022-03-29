@@ -43,7 +43,7 @@
     transform: translateX(-50%) scale(1);
     border-radius: 10%;
     background-color: rgba(255, 255, 255, 0.376);
-    box-shadow: 0 0 20px 5px white;
+    box-shadow: 0 0 10px 5px var(--titleColor);
     animation: pictureShow .8s ease 1 forwards;
     width: 323px;
     height: 401px;
@@ -60,12 +60,12 @@
 }
 
 .aboutHello {
-    font-size: 90px;
+    font-size: 5rem;
     position: absolute;
     top: 15vh;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(9, 47, 78, 0.911);
+    color: var(--titleColor);
     text-transform: uppercase;
     animation: helloH1 1s ease 1 forwards;
 }
@@ -83,7 +83,7 @@
 
 .pAboutMe p {
     color: white;
-    font-size: 40px;
+    font-size: 1.7rem;
     opacity: 0;
     animation: showTextAboutMe 1s linear 1 forwards;
     position: absolute;
@@ -100,7 +100,7 @@
 }
 
 .pAboutMe :first-child {
-    font-size: 60px;
+    font-size: 3rem;
     top: 20vh;
     left: 7vw;
     animation-delay: 1s;
@@ -124,7 +124,6 @@
     top: 40vh;
     left: 65vw;
     animation-delay: 4s;
-    /* transform: rotate(20deg); */
 }
 
 .pAboutMe :nth-child(5) {
@@ -163,7 +162,6 @@
 .Dorota4a,
 .Dorota4b {
     position: absolute;
-    /* transform: scale(.8); */
     height: 40vh;
     width: 50%;
 }
@@ -172,33 +170,42 @@
 .aboutOneA2 {
     position: absolute;
     top: 10vh;
-    left: 20vw;
-    width: 60vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
     height: 40vh;
     border: 2px solid whitesmoke;
     background-color: rgba(14, 13, 13, 0.383);
 }
 
+.aboutOneA1 {
+    border-bottom: none;
+}
+
+.aboutOneA2 {
+    border-top: none;
+}
+
 .aboutOneA1 p {
     color: white;
-    font-size: 31px;
-    width: 25vw;
-    margin-left: 32vw;
+    font-size: 1.5rem;
+    width: 30vw;
+    margin-left: 37vw;
     height: 40vh;
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .aboutOneA2 p {
     color: white;
-    font-size: 31px;
-    width: 25vw;
+    font-size: 1.5rem;
+    width: 30vw;
     margin: 5vh 32vw 0 2vw;
     height: 40vh;
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .fa-bed {
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .aboutOneA2 {
@@ -225,7 +232,7 @@
 .Dorota2b,
 .Dorota2c {
     position: absolute;
-    border-radius: 10%;
+    border-radius: 15px;
     border: 2px solid white;
     animation: moveDorota2 4s linear infinite alternate;
 }
@@ -265,20 +272,20 @@
 }
 
 .aboutTwo p {
-    font-size: 34px;
-    line-height: 1.8;
+    font-size: 1.8rem;
+    line-height: 1.7;
     text-align: center;
     color: white;
     position: absolute;
     top: 20vh;
     left: 60vw;
     width: 30vw;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .fa-grin-hearts {
     margin-left: 30px;
-    font-size: 50px;
+    font-size: 40px;
     animation: smileDown 4s ease infinite alternate;
 }
 
@@ -316,13 +323,13 @@
 
 .Dorota3a {
     border: 2px solid white;
-    border-radius: 10% 0 0 10%;
+    border-radius: 10px 0 0 10px;
     animation: moveDorota3 5s linear infinite;
 }
 
 .Dorota3b {
     border: 2px solid white;
-    border-radius: 0 10% 10% 0;
+    border-radius: 0 10px 10px 0;
     animation: moveDorota3 5s linear infinite reverse;
 }
 
@@ -351,8 +358,8 @@
 .aboutThird p {
     color: white;
     margin: 0 50px;
-    font-size: 30px;
-    line-height: 1.6;
+    font-size: 1.7rem;
+    line-height: 1.5;
     width: 20vw;
 }
 
@@ -417,9 +424,8 @@
 
     .aboutHello {
         width: 100vw;
-        font-size: 70px;
-        top: 5vh;
-        color: rgb(236, 236, 236);
+        font-size: 50px;
+        top: 2vh;
         z-index: 1;
     }
 
@@ -429,18 +435,18 @@
         }
 
         100% {
-            top: 5vh;
+            top: 2vh;
         }
     }
 
 
     .pAboutMe p {
-        font-size: 28px;
+        font-size: 20px;
         z-index: 1;
     }
 
     .pAboutMe :first-child {
-        font-size: 34px;
+        font-size: 28px;
         top: 20vh;
         left: 4vw;
         transform: rotate(-10deg);
@@ -505,8 +511,8 @@
         height: 80vh;
         display: flex;
         flex-direction: column-reverse;
-        /* padding-top: 10vh; */
-        /* background-color: transparent; */
+        margin: 0 auto;
+        transform: translateX(0%);
     }
 
     .Dorota4a,
@@ -518,7 +524,7 @@
     }
 
     .aboutOneA1 p {
-        font-size: 24px;
+        font-size: 18px;
         width: 90vw;
         margin: 10vh auto;
         height: 40vh;
@@ -526,7 +532,7 @@
     }
 
     .aboutOneA2 p {
-        font-size: 24px;
+        font-size: 18px;
         width: 90vw;
         margin: 5vh auto;
         height: 40vh;
@@ -534,7 +540,7 @@
     }
 
     .fa-bed {
-        margin: 20px;
+        margin-left: 20px;
     }
 
 
@@ -581,14 +587,14 @@
     }
 
     .aboutTwo p {
-        font-size: 26px;
-        line-height: 1.2;
-        text-align: center;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: left;
         color: white;
         position: absolute;
         top: 10vh;
-        left: 1vw;
-        width: 50vw;
+        left: 2vw;
+        width: 45vw;
         font-weight: 400;
     }
 
@@ -632,13 +638,11 @@
 
     .Dorota3a {
         border: 2px solid white;
-        border-radius: 10% 0 0 10%;
         animation: moveDorota3 5s linear infinite;
     }
 
     .Dorota3b {
         border: 2px solid white;
-        border-radius: 0 10% 10% 0;
         animation: moveDorota3 5s linear infinite reverse;
     }
 
@@ -667,17 +671,17 @@
     .aboutThird p {
         color: white;
         margin: 10vh auto;
-        font-size: 26px;
-        line-height: 1.2;
+        font-size: 20px;
+        line-height: 1.5;
         width: 90vw;
     }
 
     .fa-smile-beam {
-        margin-left: 20px;
+        margin-left: 18px;
     }
 
     .fa-grin-beam-sweat {
-        font-size: 26px;
+        font-size: 18px;
         margin: 0 10px;
     }
 
@@ -703,16 +707,16 @@
     }
 
     .aboutHello {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .pAboutMe p {
-        font-size: 22px;
+        font-size: 16px;
     }
 
 
     .pAboutMe :first-child {
-        font-size: 30px;
+        font-size: 22px;
         top: 20vh;
         left: 4vw;
     }
@@ -753,7 +757,6 @@
     .Dorota4a,
     .Dorota4b {
         position: absolute;
-        /* transform: scale(.8); */
         height: 50vh;
         width: 50%;
     }
@@ -764,6 +767,7 @@
         left: 0vw;
         width: 100vw;
         height: 50vh;
+        transform: translateX(0);
     }
 
     .aboutOneA2 {
@@ -771,7 +775,7 @@
     }
 
     .aboutOneA1 p {
-        font-size: 18px;
+        font-size: 14px;
         width: 50vw;
         margin-left: 50vw;
         height: 50vh;
@@ -779,7 +783,7 @@
     }
 
     .aboutOneA2 p {
-        font-size: 18px;
+        font-size: 14px;
         width: 49vw;
         margin-left: 0vw;
         height: 50vh;
@@ -788,7 +792,7 @@
     }
 
     .fa-bed {
-        margin: 10px;
+        margin-left: 10px;
     }
 
     .aboutTwo {
@@ -818,8 +822,8 @@
     }
 
     .aboutTwo p {
-        font-size: 22px;
-        line-height: 1.4;
+        font-size: 18px;
+        line-height: 1.5;
         top: 20vh;
         left: 50vw;
         width: 50vw;
@@ -827,7 +831,7 @@
     }
 
     .fa-grin-hearts {
-        margin-left: 10px;
+        margin-left: 5px;
         font-size: 20px;
         animation: smileDown 4s ease infinite alternate;
     }
@@ -842,17 +846,17 @@
 
     .aboutThird p {
         margin: auto;
-        font-size: 18px;
-        line-height: 1.2;
-        width: 20vw;
+        font-size: 16px;
+        line-height: 1.4;
+        width: 22vw;
     }
 
     .fa-smile-beam {
-        margin-left: 20px;
+        margin-left: 16px;
     }
 
     .fa-grin-beam-sweat {
-        font-size: 20px;
+        font-size: 16px;
         margin: 0 10px;
     }
 

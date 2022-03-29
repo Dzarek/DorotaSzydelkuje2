@@ -7,7 +7,7 @@
     text-transform: uppercase;
     letter-spacing: 8px;
     color: white;
-    text-shadow: 0px 0px 15px rgb(9, 95, 76);
+    text-shadow: 2px 2px 2px #222;
 }
 
 .zabawkiPage .pictureZabawki {
@@ -21,22 +21,22 @@
 
 
 .zabawkiPage .pictureZabawki img {
-    background-color: rgba(59, 59, 59, 0.616);
-    border: 4px solid rgba(8, 47, 39, 0.719);
+    background-color: var(--productBG);
+    border: 4px solid var(--productBG);
     transition: .4s;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px white;
+    box-shadow: 0px 0px 5px 3px white;
     margin: 50px auto;
     height: 400px;
     margin: 50px;
 }
 
 .zabawkiPage .pictureZabawki img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .zabawkiPage .textAndDetails {
-    width: 80vw;
+    width: 90vw;
     margin: 20vh auto 10vh;
     display: flex;
     flex-direction: row;
@@ -45,29 +45,31 @@
 }
 
 .zabawkiPage .textZabawki {
-    width: 35vw;
-    font-size: 30px;
+    width: 40vw;
+    font-size: 1.5rem;
     text-align: left;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px #222;
 }
 
 .textAndDetails .detailsZabawki p {
     margin-top: 3vh;
     width: 35vw;
-    font-size: 32px;
+    font-size: 1.8rem;
+    padding: 1vh 2vw;
     text-align: center;
-    color: rgba(8, 47, 39, 0.719);
-    line-height: 2;
-    border: 5px solid rgba(8, 47, 39, 0.719);
-    background-color: #ddd;
+    color: var(--productBG);
+    border: 5px solid var(--productBG);
+    background-color: #eee;
     border-radius: 10px;
 }
 
 .orderBuyH2 {
-    font-size: 60px;
+    font-size: 4rem;
     color: white;
     letter-spacing: 3px;
+    text-shadow: 2px 2px 2px #222;
 }
 
 .orderBuy {
@@ -86,30 +88,31 @@
 }
 
 .colorZabawki p {
-    font-size: 30px;
+    font-size: 1.8rem;
     color: white;
     margin: 0 auto 3vh;
     text-align: center;
-    font-weight: bold;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px #222;
 }
 
 .colorZabawki img {
     width: 30vw;
     height: 30vw;
     opacity: .8;
-    border: 5px solid rgba(8, 47, 39, 0.719);
+    border: 5px solid var(--productBG);
+    border-radius: 10px;
 }
 
 .toBuyZabawki {
     margin-top: 5vh;
     width: 40%;
-    font-size: 28px;
     text-align: center;
     color: #eee;
     line-height: 1.4;
     height: 70vh;
     border: 4px solid rgb(198, 199, 199);
-    background-color: rgba(8, 47, 39, 0.719);
+    background-color: var(--productBG);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -124,8 +127,12 @@
     margin: 30px auto;
 }
 
+.orderBuy .toBuyZabawki span:nth-of-type(2) {
+    margin-top: 80px;
+}
+
 .orderBuy .toBuyZabawki span p {
-    font-size: 30px;
+    font-size: 1.4rem;
     letter-spacing: 0;
     color: #bbb;
 }
@@ -138,17 +145,20 @@
     border: 2px solid white;
     border-radius: 5px;
     padding: 5px 40px;
-    color: rgb(9, 95, 76);
+    color: var(--productBG);
     background-color: rgba(255, 255, 255, 0.534);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: var(--titleFont);
     letter-spacing: 2;
     animation: orderContactBtnPadding 1.5s linear infinite alternate;
 }
 
 .toBuyZabawki .orderContactBtn:hover {
-    background-color: rgb(30, 47, 43);
+    background-color: var(--productBG);
     color: rgba(255, 255, 255, 0.76);
     animation: none;
 }
@@ -172,9 +182,8 @@
 .othersZabawki h2 {
     padding-top: 5vh;
     font-size: 50px;
-    color: rgba(8, 47, 39, 0.719);
+    color: var(--productBG);
     letter-spacing: 3px;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
 
@@ -186,7 +195,7 @@
 
 
 .othersZabawki ul li {
-    /* width: 250px; */
+    width: 250px;
     height: 350px;
     margin: 50px;
     text-decoration: none;
@@ -204,10 +213,13 @@
     height: 20%;
     color: white;
     padding: 10px 5px;
-    font-size: 30px;
-    background-color: rgba(8, 47, 39, 0.719);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--productBG);
     border-radius: 0 0 10px 10px;
-    box-shadow: 0px 5px 15px 0px white;
+    border: 2px solid var(--productBG);
 }
 
 
@@ -216,19 +228,19 @@
     width: 100%;
     background-color: rgba(88, 88, 88, 0.726);
     border-radius: 10px 10px 0 0;
-    box-shadow: 0 0 15px 5px white;
-
+    border: 2px solid var(--productBG);
+    border-bottom: none;
 }
 
 .arrowrRightLeftFeatures {
-    color: rgb(9, 95, 76);
+    color: var(--productBG);
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
 
 .arrowrRightLeftFeatures:hover {
-    color: rgba(8, 47, 39, 0.719);
+    color: #222;
 }
 
 .rec.rec-arrow {
@@ -263,8 +275,8 @@
 
     .zabawkiPage .pictureZabawki img {
         transition: .4s;
-        height: 50vh;
-        border-radius: 30px;
+        height: 45vh;
+        border-radius: 10px;
         box-shadow: none;
     }
 
@@ -282,7 +294,7 @@
 
     .zabawkiPage .textZabawki {
         width: 100%;
-        font-size: 30px;
+        font-size: 24px;
         text-align: center;
         color: white;
         font-weight: 500;
@@ -292,13 +304,13 @@
     .textAndDetails .detailsZabawki p {
         margin-top: 2vh;
         width: 100%;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 1.2;
         padding: 15px;
     }
 
     .orderBuyH2 {
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 1px;
     }
 
@@ -319,7 +331,7 @@
 
     .colorZabawki p {
         width: 90%;
-        font-size: 26px;
+        font-size: 22px;
         margin: 0 auto 3vh;
         font-weight: 500;
     }
@@ -338,18 +350,18 @@
     }
 
     .orderBuy .toBuyZabawki span {
-        font-size: 28px;
+        font-size: 22px;
         letter-spacing: 1px;
         margin: 25px auto;
     }
 
     .orderBuy .toBuyZabawki span p {
-        font-size: 24px;
+        font-size: 20px;
         margin-top: 1vh;
     }
 
     .toBuyZabawki .orderContactBtn {
-        font-size: 24px;
+        font-size: 20px;
         padding: 2vw 10vw;
     }
 
@@ -359,7 +371,7 @@
 
     .othersZabawki h2 {
         padding-top: 5vh;
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 1px;
     }
 
@@ -378,7 +390,7 @@
 
     .othersZabawki li p {
         height: 20%;
-        font-size: 30px;
+        font-size: 20px;
     }
 
 }
@@ -395,7 +407,7 @@
 
     .zabawkiPage .pictureZabawki img {
 
-        height: 80vh;
+        height: 70vh;
         margin: 40px 0 0;
     }
 
@@ -411,7 +423,7 @@
 
     .zabawkiPage .textZabawki {
         width: 45vw;
-        font-size: 24px;
+        font-size: 20px;
         text-align: center;
         font-weight: 500;
     }
@@ -419,13 +431,13 @@
     .textAndDetails .detailsZabawki p {
         margin-top: 5vh;
         width: 45vw;
-        font-size: 26px;
+        font-size: 20px;
         text-align: center;
         line-height: 1.5;
     }
 
     .orderBuyH2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .orderBuy {
@@ -438,7 +450,7 @@
     }
 
     .colorZabawki p {
-        font-size: 24px;
+        font-size: 20px;
         margin: 0 auto 3vh;
         font-weight: 500;
     }
@@ -458,21 +470,21 @@
     }
 
     .orderBuy .toBuyZabawki span {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
         letter-spacing: 2px;
         margin: 30px auto;
     }
 
     .orderBuy .toBuyZabawki span p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
 
 
     .othersZabawki h2 {
         padding-top: 5vh;
-        font-size: 36px;
+        font-size: 26px;
         letter-spacing: 2px;
     }
 
@@ -489,7 +501,7 @@
     }
 
     .othersZabawki li p {
-        font-size: 30px;
+        font-size: 18px;
     }
 
 }

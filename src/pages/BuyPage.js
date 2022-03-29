@@ -111,7 +111,11 @@ class BuyPage extends Component {
               {readyProdukt.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Carousel breakPoints={1} pagination={false}>
+                    <Carousel
+                      className="buyNowItem"
+                      breakPoints={1}
+                      pagination={false}
+                    >
                       {item.images.map((img, index) => {
                         return <img src={img} alt={item.name} key={index} />;
                       })}

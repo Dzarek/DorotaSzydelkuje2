@@ -9,8 +9,8 @@
 }
 
 .begin {
-    position: absolute;
-    top: 12vh;
+    position: relative;
+    top: 16vh;
     left: 15vw;
     width: 100vw;
     height: auto;
@@ -20,38 +20,40 @@
 
 
 .begin h1 {
-    font-size: 9vh;
+    font-size: 8vh;
     text-transform: uppercase;
     margin: 0 auto 26px;
-    border-bottom: 3px whitesmoke solid;
-    /* border-bottom: 14px cadetblue dotted; */
-    width: 45vw;
-    padding-bottom: 7vh;
-    /* color: rgba(12, 69, 116, 0.911); */
-    color: rgba(9, 47, 78, 0.911);
+    width: 100vw;
+    padding-bottom: 15vh;
+    color: var(--titleColor);
     letter-spacing: 2px;
-    animation: shadowColor 2s linear infinite alternate;
+    font-family: 'Merienda', cursive;
 }
 
-@keyframes shadowColor {
-    0% {
-        text-shadow: none;
-    }
+.beginLineContainer {
+    position: absolute;
+    top: 22vh;
+    left: 50vw;
+}
 
-    100% {
-        text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.911);
-    }
+.beginLine {
+    width: 40vw;
+    height: 3px;
+    background: whitesmoke;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
 }
 
 .begin p {
     width: 50vw;
-    margin: 7vh auto 0;
-    font-size: 42px;
-    /* color: rgb(87, 54, 33); */
+    margin: 3vh auto 0;
     color: #eee;
     text-align: center;
-    animation: showText 1s linear 1;
-
+    animation: showText 2s linear 1;
+    font-size: 1.7rem;
+    font-weight: 400;
 }
 
 @keyframes showText {
@@ -67,75 +69,45 @@
 
 .yarnBall {
     position: absolute;
-    top: 25vh;
-    left: 45vw;
-    height: 6vh;
-    width: 6vh;
-    animation: ballMove1 5s linear 1 forwards, ballMove2 8s linear 1 forwards 5s;
+    top: 50%;
+    left: -50%;
+    transform: translateY(-50%);
+    margin-top: -2.5vh;
+    height: 5vh;
+    width: 5vh;
+    animation: ballMove1 5s linear infinite alternate;
+    filter: saturate(0.7);
 }
 
 @keyframes ballMove1 {
     0% {
-
-        transform: rotate(0deg);
+        left: -51%;
+        transform: translateY(-50%) rotate(0deg);
     }
 
     100% {
-        left: 87vw;
-        transform: rotate(1080deg);
+        left: 45%;
+        transform: translateY(-50%) rotate(1080deg);
     }
 
 }
 
-@keyframes ballMove2 {
-    0% {
-
-        transform: rotate(0deg);
-    }
-
-    99% {
-        top: 355vh;
-        left: 91vw;
-        transform: rotate(1080deg);
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
-}
-
-
-
-@keyframes showCat {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
-}
 
 video {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -5;
-    /* filter: brightness(0.6) sepia(25%);
-    opacity: 0.6; */
 }
 
 .videoFilter {
     object-fit: cover;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -5;
@@ -152,15 +124,17 @@ video {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(22, 22, 22, 0.25);
+    background-color: rgba(22, 22, 22, 0.5);
 }
 
 .home2 section {
-    height: 90vh;
+    height: 80vh;
     width: 90vw;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 30px;
     margin: 0vh auto;
 
 }
@@ -169,14 +143,13 @@ video {
     height: 30%;
     width: 30%;
     position: absolute;
-    font-size: 35px;
+    font-size: 1.5rem;
 }
 
 .home2 span {
     height: 30%;
     width: 30%;
     position: absolute;
-    /* background-color: rgba(255, 255, 255, 0.5); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -185,13 +158,13 @@ video {
 }
 
 .home2 span:nth-of-type(1) {
-    bottom: 5%;
+    bottom: 3%;
     left: 5%;
     background-image: url(../images/home1.jpg);
 }
 
 .home2 span:nth-of-type(2) {
-    top: 5%;
+    top: 3%;
     right: 5%;
     background-image: url(../images/home2.jpg);
 }
@@ -202,7 +175,7 @@ video {
 }
 
 .home2 p:nth-of-type(2) {
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: blanchedalmond;
@@ -217,7 +190,7 @@ video {
     height: 90vh;
     width: 100vw;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .home3Right {
@@ -228,10 +201,9 @@ video {
     width: 40%;
     height: 100%;
     color: rgb(214, 213, 213);
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.582);
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
-    border-radius: 20px;
     z-index: 3;
 }
 
@@ -241,21 +213,21 @@ video {
 }
 
 .home3Right .navlinkhome3 {
-    background-color: rgba(9, 47, 78, 0.911);
-    padding: 10px 60px;
+    background-color: var(--titleColor);
+    padding: 10px 40px;
     border: 2px solid rgb(162, 162, 165);
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 2rem;
     letter-spacing: 2px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    transition: .3s;
+    transition: .5s;
     font-weight: bold;
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Merienda', cursive;
 }
 
 .home3Right .navlinkhome3:hover {
-    box-shadow: 0 0 10px 5px white;
+    box-shadow: 0 0 10px 2px white;
 }
 
 .home3Right p {
@@ -268,7 +240,6 @@ video {
     top: 60%;
     left: -20%;
     height: 100%;
-    /* width: 50%; */
     width: 140%;
     transform: translateY(-50%);
 }
@@ -278,8 +249,8 @@ video {
     height: 100vh;
     width: 100vw;
     position: relative;
-    background-color: rgba(22, 22, 22, 0.4);
-    color: blanchedalmond
+    color: var(--titleColor);
+    color: white;
 }
 
 .home4 h2 {
@@ -287,14 +258,15 @@ video {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 32px;
+    font-size: 1.9rem;
     text-transform: uppercase;
     width: 100%;
+    text-shadow: 0px 1px 0px #222;
 }
 
 .home4 ul {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
@@ -303,41 +275,42 @@ video {
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
+    align-items: flex-end;
 }
 
 .home4 ul li {
-    font-size: 40px;
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
-    /* box-shadow: 0 0 5px 5px white; */
-    /* background-color: rgba(255, 255, 255, 0.13); */
-    font-family: 'Cabin', sans-serif;
+    align-items: center;
+    font-family: var(--titleFont);
     color: white;
     text-transform: uppercase;
 }
 
 .home4 ul li img {
     font-size: 30px;
-    width: 10vw;
-    height: 25vh;
-    filter: sepia(.3) saturate(.5);
+    width: 12vw;
+    margin-bottom: 3vh;
+    filter: sepia(.0) saturate(.6);
+    transition: 0.4s;
+}
+
+.home4 ul li img:hover {
+    transform: scale(1.1);
 }
 
 .home4 .navlinkhome4 {
     text-decoration: none;
-    color: rgba(241, 241, 241, 0.87);
-    text-shadow: 0px 0 2px white;
-    animation: navlinkhome4Show 1s linear infinite;
-    font-family: 'Cabin', sans-serif;
+    color: var(--titleColor);
+    animation: navlinkhome4Show 3s ease infinite;
+    font-family: var(--titleFont);
+    font-weight: bold;
 }
 
 @keyframes navlinkhome4Show {
     0% {
         opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
     }
 
     40% {
@@ -356,7 +329,7 @@ video {
     transform: translateX(-50%);
     font-size: 40px;
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .fa-smile-wink {
@@ -364,16 +337,8 @@ video {
 }
 
 
-.catYarn {
-    position: absolute;
-    top: 85vh;
-    left: 89vw;
-    height: 120px;
-    width: 120px;
-    transform: scaleX(-1);
-    opacity: 0;
-    animation: showCat 1000s linear 1 forwards 13s;
-    z-index: 12;
+.yarnBallMobile {
+    display: none;
 }
 
 @media (orientation: portrait) and (min-width: 320px) {
@@ -387,6 +352,9 @@ video {
         margin: 0 auto;
     }
 
+    .beginLine {
+        display: none;
+    }
 
     .begin h1 {
         font-size: 6vh;
@@ -398,20 +366,27 @@ video {
     }
 
     .begin p {
-        width: 90vw;
-        /* margin: 10vh auto 0; */
-        font-size: 26px;
+        width: 95vw;
+        padding-top: 3vh;
+        font-size: 1.3rem;
         color: #eee;
         text-align: center;
         font-weight: 600;
+        text-shadow: 1px 1px 1px #222;
+    }
+
+    .yarnBallMobile {
+        display: block;
+        position: absolute;
+        top: 23vh;
+        left: 10vw;
+        height: 5vh;
+        width: 5vh;
+        animation: ballMove1 4s linear infinite alternate;
     }
 
     .yarnBall {
-        top: 30vh;
-        left: 10vw;
-        height: 6vh;
-        width: 6vh;
-        animation: ballMove1 2s linear infinite alternate, ballMove2 none;
+        display: none;
     }
 
     @keyframes ballMove1 {
@@ -431,27 +406,25 @@ video {
         position: relative;
         height: 100vh;
         width: 100vw;
-        background-color: rgba(22, 22, 22, 0.25);
     }
 
     .home2 section {
-        height: 100vh;
-        width: 90vw;
-        position: relative;
+        height: 90vh;
+        width: 95vw;
+        position: absolute;
         color: white;
-        font-size: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding: 0vh auto;
-
+        margin: 0 auto;
     }
 
     .home2 p {
         height: auto;
-        width: 90%;
+        width: 95%;
         position: static;
-        font-size: 28px;
+        font-size: 1.2rem;
         margin: 0px auto;
 
     }
@@ -474,7 +447,6 @@ video {
         height: 100vh;
         width: 100vw;
         position: relative;
-        background-color: rgba(209, 208, 208, 0.801);
     }
 
     .home3Right {
@@ -484,12 +456,11 @@ video {
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        font-size: 20px;
-        background-color: rgba(255, 255, 255, 0.3);
+        font-size: 1.3rem;
+        background-color: rgba(255, 255, 255, 0.6);
         padding: 10px;
-        border-radius: 0px;
         z-index: 3;
-        color: rgba(9, 47, 78, 1);
+        color: #222;
         text-shadow: 0 0 3px white;
     }
 
@@ -499,19 +470,17 @@ video {
     }
 
     .home3Right .navlinkhome3 {
-        background-color: rgba(9, 47, 78, 1);
         padding: 10px 40px;
         border-radius: 10px;
         font-size: 22px;
         letter-spacing: 2px;
         color: white;
-        font-family: 'Cabin', sans-serif;
     }
 
 
     .home3Right p {
         margin: 15vh auto 0;
-        font-size: 36px;
+        font-size: 1.5rem;
         width: 80%;
         font-weight: bold;
 
@@ -523,7 +492,6 @@ video {
         top: 60%;
         left: 0%;
         height: 100%;
-        /* width: 50%; */
         width: 200%;
         transform: translateY(-50%);
     }
@@ -533,8 +501,6 @@ video {
         height: 130vh;
         width: 100vw;
         position: relative;
-        background-color: rgba(22, 22, 22, 0.4);
-        color: blanchedalmond
     }
 
     .home4 h2 {
@@ -542,9 +508,10 @@ video {
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 24px;
+        font-size: 1.3rem;
         text-transform: uppercase;
         width: 95%;
+        letter-spacing: 0;
     }
 
     .home4 ul {
@@ -552,8 +519,8 @@ video {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;
-        height: 75vh;
+        width: 95%;
+        height: 80vh;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -564,15 +531,12 @@ video {
     }
 
     .home4 ul li {
-        color: white;
         font-size: 22px;
         display: flex;
         flex-direction: column;
-        width: 38%;
+        width: 35%;
         height: auto;
         margin: 0px;
-        font-family: 'Cabin', sans-serif;
-        text-transform: uppercase;
         font-weight: bold;
     }
 
@@ -586,18 +550,17 @@ video {
     .home4 ul li img {
         width: 100%;
         height: auto;
-        filter: sepia(.3) saturate(.5);
+        margin-bottom: 0;
     }
 
     .home4 .navlinkhome4 {
         text-decoration: none;
-        color: rgba(241, 241, 241, 0.87);
         text-shadow: 0px 0 2px white;
         animation: navlinkhome4Show 1s linear infinite;
-        font-family: 'Cabin', sans-serif;
         text-align: center;
         margin-left: 5px;
-
+        font-family: 'Kalam', cursive;
+        font-weight: 600;
     }
 
 
@@ -606,7 +569,7 @@ video {
         bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 30px;
+        font-size: 1.3rem;
         width: 100%;
         font-weight: 600;
     }
@@ -632,59 +595,22 @@ video {
         margin: 0 auto;
     }
 
+    .beginLine {
+        display: none;
+    }
 
     .begin h1 {
-        /* font-size: 9vh; */
-        /* margin: 0 auto 10px; */
         width: 50vw;
-        /* padding-bottom: 20px; */
+        padding-bottom: 5vh;
     }
 
     .begin p {
         width: 60vw;
-        /* margin: 0 auto; */
-        font-size: 22px;
+        font-size: 16px;
     }
 
-    /* .yarnBall {
-        position: absolute;
-        top: 40vh;
-        left: 40vw;
-        height: 20px;
-        width: 20px;
-        animation: ballMove1 5s linear 1 forwards, ballMove2 8s linear 1 forwards 5s;
-    } */
-
-    @keyframes ballMove1 {
-        0% {
-
-            transform: rotate(0deg);
-        }
-
-        100% {
-            left: 84vw;
-            transform: rotate(1080deg);
-        }
-
-    }
-
-    @keyframes ballMove2 {
-        0% {
-
-            transform: rotate(0deg);
-        }
-
-        99% {
-            top: 355vh;
-            left: 91vw;
-            transform: rotate(1080deg);
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-
+    .yarnBall {
+        display: none;
     }
 
 
@@ -697,7 +623,7 @@ video {
     .home2 p {
         height: 30%;
         width: 30%;
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .home3 {
@@ -708,7 +634,7 @@ video {
     .home3Right {
         width: 40%;
         height: 100%;
-        font-size: 20px;
+        font-size: 16px;
         padding: 20px;
     }
 
@@ -738,7 +664,7 @@ video {
 
     .home4 h2 {
         top: 5%;
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .home4 ul {
@@ -746,18 +672,18 @@ video {
     }
 
     .home4 ul li {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .home4 ul li img {
         width: auto;
         height: 20vh;
-
+        margin-bottom: 0;
     }
 
 
     .home4 p {
-        font-size: 26px;
+        font-size: 16px;
         font-weight: 500;
     }
 

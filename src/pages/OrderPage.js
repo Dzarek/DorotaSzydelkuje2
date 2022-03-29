@@ -73,7 +73,7 @@ class OrderPage extends Component {
 
   handleChangeState = () => {
     this.setState({
-      active: true,
+      active: false,
       activePluszaki: false,
       activePufy: false,
       activeKoce: false,
@@ -123,16 +123,18 @@ class OrderPage extends Component {
       <>
         <div className="orderBg"> </div>
         <div
-          onClick={() => this.setState({ active: false })}
+          // onClick={() => this.setState({ active: false })}
           className={this.state.active ? "ring" : "ring activeOrder"}
         >
-          {!this.state.active ? null : (
+          {this.state.active && (
             <div className="easyOrder">
               <h1 className="easyOrderha">To proste - wybierz produkt,</h1>
               <h1 className="easyOrderhb">a ja go dla Ciebie wyszydełkuję!</h1>
             </div>
           )}
-          {!this.state.activePluszaki ? null : (
+          {!this.state.activePluszaki &&
+          !this.state.activeKoce &&
+          !this.state.activePufy ? null : (
             <h1 className="titleProducts">Wybierz interesujący Cię produkt</h1>
           )}
           <h2

@@ -51,17 +51,19 @@ class App extends Component {
               className="cookieInfo"
               style={{
                 background: "rgba(0,0,0, .8)",
-                fontSize: "24px",
+                fontSize: "20px",
                 display: "flex",
                 justifyContent: "space-around",
                 alignItems: "center",
+                padding: "0 20px",
+                textAlign: "left",
               }}
               buttonStyle={{
-                color: "#222",
+                color: "#fff",
                 fontSize: "18px",
-                backgroundColor: "pink",
+                backgroundColor: "rgba(46, 66, 83, 0.911)",
                 padding: "10px",
-                boxShadow: "0 0 2px 2px pink",
+                borderRadius: "5px",
               }}
               expires={7}
             >
@@ -69,8 +71,7 @@ class App extends Component {
               zgodę na ich używanie. <br /> Ze szczegółowymi informacjami
               dotyczącymi cookies na tej stronie można się zapoznać tutaj:
               <NavLink className="cookieLink" to="/cookie">
-                {" "}
-                (Polityka Prywatności)
+                {""} Polityka Prywatności
               </NavLink>
               .
             </CookieConsent>
