@@ -106,9 +106,12 @@ nav.main a.active {
         position: fixed;
         width: 100vw;
         height: 50vh;
+        height: 100vh;
         top: 0;
         left: 0;
         transition: .8s;
+        background: transparent;
+        backdrop-filter: blur(3px);
     }
 
     nav.off {
@@ -122,12 +125,13 @@ nav.main a.active {
         justify-content: space-around;
         width: 100vw;
         height: 100%;
+        height: 50%;
         margin: 0 auto;
         position: absolute;
         top: 0;
         left: 0;
         flex-grow: 1;
-        background-color: rgba(0, 0, 0, .9);
+        background-color: rgba(0, 0, 0, 1);
         padding: 3vh;
     }
 

@@ -1,74 +1,19 @@
 import React, { Component } from "react";
 import "../styles/OrderPage.css";
-import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { produkt } from "../data";
-import Client from "../Contentful";
 
 class OrderPage extends Component {
-  state = {
-    active: true,
-    activePluszaki: false,
-    activePufy: false,
-    activeKoce: false,
-    activePoduszki: false,
-    activeKosze: false,
-    products: [],
-  };
-
-  // getData;
-  getData = async () => {
-    try {
-      let response = await Client.getEntries({
-        content_type: "dorotaSzydelkuje",
-        order: "sys.createdAt",
-      });
-      let products = response.items;
-      products = products.map((item) => {
-        let {
-          name,
-          slug,
-          type,
-          price,
-          size,
-          wash,
-          material,
-          ready,
-          description,
-        } = item.fields;
-        let { id } = item.sys;
-        let img = item.fields.img.fields.file.url;
-        let imgOthers = item.fields.imgOthers.fields.file.url;
-        let images = item.fields.images;
-        images = images.map((image) => {
-          return image.fields.file.url;
-        });
-        return {
-          id,
-          name,
-          slug,
-          type,
-          price,
-          size,
-          wash,
-          material,
-          ready,
-          description,
-          img,
-          imgOthers,
-          images,
-        };
-      });
-      this.setState({
-        products,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  componentDidMount() {
-    this.getData();
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: true,
+      activePluszaki: false,
+      activePufy: false,
+      activeKoce: false,
+      activePoduszki: false,
+      activeKosze: false,
+      products: this.props.products,
+    };
   }
 
   handleChangeState = () => {
@@ -124,7 +69,6 @@ class OrderPage extends Component {
 
   render() {
     const workData = this.state.products;
-    console.log(workData);
 
     const linksZabawki = workData.filter((item) => item.type === "pluszak");
     const linksPufy = workData.filter((item) => item.type === "pufy");
@@ -211,8 +155,8 @@ class OrderPage extends Component {
               {linksZabawki.map((link) => {
                 const { id, name, slug, img } = link;
                 return (
-                  <li>
-                    <Link key={id} className="link" to={`/order/${slug}`}>
+                  <li key={id}>
+                    <Link className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
                     </Link>
@@ -240,8 +184,8 @@ class OrderPage extends Component {
               {linksPufy.map((link) => {
                 const { id, name, slug, img } = link;
                 return (
-                  <li>
-                    <Link key={id} className="link" to={`/order/${slug}`}>
+                  <li key={id}>
+                    <Link className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
                     </Link>
@@ -269,11 +213,11 @@ class OrderPage extends Component {
               {linksKoce.map((link) => {
                 const { id, name, slug, img } = link;
                 return (
-                  <li>
-                    <NavLink key={id} className="link" to={`/order/${slug}`}>
+                  <li key={id}>
+                    <Link className="link" to={`/order/${slug}`}>
                       <img src={img} alt={name} />
                       <p>{name}</p>
-                    </NavLink>
+                    </Link>
                   </li>
                 );
               })}

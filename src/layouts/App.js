@@ -20,7 +20,69 @@ import ErrorPage from "../pages/ErrorPage";
 //ZABAWKI
 import AllProducts from "../pages/orderpages/zabawki/AllProducts";
 
+import Client from "../Contentful";
+import Loading from "../components/Loading";
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+    };
+  }
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "dorotaSzydelkuje",
+        order: "sys.createdAt",
+      });
+      let products = response.items;
+      products = products.map((item) => {
+        let {
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+        } = item.fields;
+        let { id } = item.sys;
+        let img = item.fields.img.fields.file.url;
+        let imgOthers = item.fields.imgOthers.fields.file.url;
+        let images = item.fields.images;
+        images = images.map((image) => {
+          return image.fields.file.url;
+        });
+        return {
+          id,
+          name,
+          slug,
+          type,
+          price,
+          size,
+          wash,
+          material,
+          ready,
+          description,
+          img,
+          imgOthers,
+          images,
+        };
+      });
+      this.setState({
+        products,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
   render() {
     return (
       <>
@@ -34,8 +96,20 @@ class App extends Component {
                 <Switch>
                   {/* NAWIGACJA */}
                   <Route path="/" exact component={HomePage} />
-                  <Route exact path="/buyNow" component={BuyPage} />
-                  <Route exact path="/order/" component={OrderPage} />
+                  <Route exact path="/buyNow">
+                    {this.state.products.length > 0 ? (
+                      <BuyPage products={this.state.products} />
+                    ) : (
+                      <Loading />
+                    )}
+                  </Route>
+                  <Route exact path="/order">
+                    {this.state.products.length > 0 ? (
+                      <OrderPage products={this.state.products} />
+                    ) : (
+                      <Loading />
+                    )}
+                  </Route>
                   <Route exact path="/aboutMe" component={AboutMePage} />
                   <Route exact path="/contact" component={ContactPage} />
                   <Route exact path="/cookie" component={CookiePage} />

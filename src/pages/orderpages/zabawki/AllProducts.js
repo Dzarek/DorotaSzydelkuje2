@@ -10,6 +10,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 // import { produkt } from "../../../data";
 import Client from "../../../Contentful";
+import Loading from "../../../components/Loading";
 
 export default class AllProducts extends Component {
   constructor(props) {
@@ -17,11 +18,15 @@ export default class AllProducts extends Component {
     this.state = {
       slug: this.props.match.params.slug,
       products: [],
+      isLoading: false,
     };
   }
 
   // getData;
   getData = async () => {
+    this.setState({
+      isLoading: true,
+    });
     try {
       let response = await Client.getEntries({
         content_type: "dorotaSzydelkuje",
@@ -63,6 +68,9 @@ export default class AllProducts extends Component {
           images,
         };
       });
+      this.setState({
+        isLoading: false,
+      });
       return products;
     } catch (error) {
       console.log(error);
@@ -83,85 +91,89 @@ export default class AllProducts extends Component {
     // const newProduct = produkt.find((item) => item.slug === this.state.slug);
     // const { name, price, size, wash, material, description, images } =
     //   newProduct;
-    return (
-      <>
-        {workData.map((data, id) => {
-          const {
-            name,
+    if (this.state.isLoading) {
+      return <Loading />;
+    } else {
+      return (
+        <>
+          {workData.map((data, id) => {
+            const {
+              name,
 
-            price,
-            size,
-            wash,
-            material,
-            description,
-            images,
-          } = data;
-          return (
-            <div key={id} className="zabawkiPage">
-              <div className="orderBg"> </div>
-              <h1>{name}</h1>
-              <SRLWrapper>
-                <section className="pictureZabawki">
-                  <Carousel
-                    infinite
-                    autoPlay={3000}
-                    animationSpeed={2000}
-                    slidesPerPage={3}
-                    breakpoints={{
-                      900: {
-                        slidesPerPage: 1,
-                      },
-                    }}
-                    addArrowClickHandler
-                    stopAutoPlayOnHover
-                    arrowLeft={
-                      <IoIosArrowDropleftCircle className="arrowrRightLeftFeatures" />
-                    }
-                    arrowRight={
-                      <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
-                    }
-                  >
-                    {images.map((img, index) => {
-                      return <img src={img} alt={name} key={index} />;
-                    })}
-                  </Carousel>
-                </section>
-              </SRLWrapper>
-              <div className="textAndDetails">
-                <section className="textZabawki">
-                  <p>
-                    {description}
-                    <br /> <br /> Wykonany przeze mnie produkt nie zniszczy się
-                    tak szybko jak to nie raz bywa z tymi kupionymi w markecie.
-                    Wyrób jest wytrzymały (nie kurczy się i nie mechaci). Można
-                    prać w pralce w 30°.
-                    <br /> <br /> Zamówienie staram się wykonać najszybciej jak
-                    tylko to możliwe, jednak czas realizacji zależny jest od
-                    różnych okoliczności. Dlatego termin wykonania ustalam
-                    indywidualnie.
-                  </p>
-                </section>
-                <section className="detailsZabawki">
-                  <p>
-                    CENA: <strong> {price}</strong>
-                  </p>
-                  <p>
-                    ROZMIAR: <strong> {size}</strong>
-                  </p>
-                  <p>
-                    PIELĘGNACJA: <strong> {wash}</strong>
-                  </p>
-                  <p>
-                    MATERIAŁ: <strong> {material}</strong>{" "}
-                  </p>
-                </section>
+              price,
+              size,
+              wash,
+              material,
+              description,
+              images,
+            } = data;
+            return (
+              <div key={id} className="zabawkiPage">
+                <div className="orderBg"> </div>
+                <h1>{name}</h1>
+                <SRLWrapper>
+                  <section className="pictureZabawki">
+                    <Carousel
+                      infinite
+                      autoPlay={3000}
+                      animationSpeed={2000}
+                      slidesPerPage={3}
+                      breakpoints={{
+                        900: {
+                          slidesPerPage: 1,
+                        },
+                      }}
+                      addArrowClickHandler
+                      stopAutoPlayOnHover
+                      arrowLeft={
+                        <IoIosArrowDropleftCircle className="arrowrRightLeftFeatures" />
+                      }
+                      arrowRight={
+                        <IoIosArrowDroprightCircle className="arrowrRightLeftFeatures" />
+                      }
+                    >
+                      {images.map((img, index) => {
+                        return <img src={img} alt={name} key={index} />;
+                      })}
+                    </Carousel>
+                  </section>
+                </SRLWrapper>
+                <div className="textAndDetails">
+                  <section className="textZabawki">
+                    <p>
+                      {description}
+                      <br /> <br /> Wykonany przeze mnie produkt nie zniszczy
+                      się tak szybko jak to nie raz bywa z tymi kupionymi w
+                      markecie. Wyrób jest wytrzymały (nie kurczy się i nie
+                      mechaci). Można prać w pralce w 30°.
+                      <br /> <br /> Zamówienie staram się wykonać najszybciej
+                      jak tylko to możliwe, jednak czas realizacji zależny jest
+                      od różnych okoliczności. Dlatego termin wykonania ustalam
+                      indywidualnie.
+                    </p>
+                  </section>
+                  <section className="detailsZabawki">
+                    <p>
+                      CENA: <strong> {price}</strong>
+                    </p>
+                    <p>
+                      ROZMIAR: <strong> {size}</strong>
+                    </p>
+                    <p>
+                      PIELĘGNACJA: <strong> {wash}</strong>
+                    </p>
+                    <p>
+                      MATERIAŁ: <strong> {material}</strong>{" "}
+                    </p>
+                  </section>
+                </div>
+                <ColorKurier />
+                <OthersZabawki />
               </div>
-              <ColorKurier />
-              <OthersZabawki />
-            </div>
-          );
-        })}
-      </>
-    );
+            );
+          })}
+        </>
+      );
+    }
   }
 }

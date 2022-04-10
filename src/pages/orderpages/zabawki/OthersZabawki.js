@@ -40,8 +40,9 @@ const OthersZabawki = () => {
                 onClick={() => {
                   window.location.reload();
                 }}
+                key={id}
               >
-                <Link key={id} to={`/order/${slug}`}>
+                <Link to={`/order/${slug}`}>
                   <img src={imgOthers} alt={name} />
                   <p>{name}</p>
                 </Link>

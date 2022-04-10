@@ -262,9 +262,9 @@
 @media (orientation: portrait) and (min-width: 320px) {
 
     .zabawkiPage h1 {
-        font-size: 50px;
-        letter-spacing: 3px;
-        width: 90vw;
+        font-size: 40px;
+        letter-spacing: 2px;
+        width: 95vw;
     }
 
     .zabawkiPage .pictureZabawki {
