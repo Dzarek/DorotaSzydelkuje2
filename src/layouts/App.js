@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import "../styles/App.css";
-import { BrowserRouter as Router } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import CookieConsent from "react-cookie-consent";
-import { Route, Switch } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 //NAWIGACJA
 import HomePage from "../pages/HomePage";
@@ -93,29 +92,41 @@ class App extends Component {
             <main>
               <section className="page">
                 <ScrollToTop />
-                <Switch>
+                <Routes>
                   {/* NAWIGACJA */}
-                  <Route path="/" exact component={HomePage} />
-                  <Route exact path="/buyNow">
-                    {this.state.products.length > 0 ? (
-                      <BuyPage products={this.state.products} />
-                    ) : (
-                      <Loading />
-                    )}
-                  </Route>
-                  <Route exact path="/order">
-                    {this.state.products.length > 0 ? (
-                      <OrderPage products={this.state.products} />
-                    ) : (
-                      <Loading />
-                    )}
-                  </Route>
-                  <Route exact path="/aboutMe" component={AboutMePage} />
-                  <Route exact path="/contact" component={ContactPage} />
-                  <Route exact path="/cookie" component={CookiePage} />
-                  <Route exact path="/order/:slug" component={AllProducts} />
-                  <Route component={ErrorPage} />
-                </Switch>
+                  <Route path="/" element={<HomePage />}></Route>
+                  <Route
+                    path="/buyNow"
+                    element={
+                      this.state.products.length > 0 ? (
+                        <BuyPage products={this.state.products} />
+                      ) : (
+                        <div className="buyPage">
+                          <h1>
+                            Tu znajdziesz rzeczy już gotowe, <br /> uszyte
+                            przeze mnie wcześniej, które możesz mieć od razu
+                          </h1>
+                          <Loading />
+                        </div>
+                      )
+                    }
+                  ></Route>
+                  <Route
+                    path="/order"
+                    element={
+                      this.state.products.length > 0 ? (
+                        <OrderPage products={this.state.products} />
+                      ) : (
+                        <Loading />
+                      )
+                    }
+                  ></Route>
+                  <Route path="/aboutMe" element={<AboutMePage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/cookie" element={<CookiePage />} />
+                  <Route path="/order/:slug" element={<AllProducts />} />
+                  <Route path="*" element={<ErrorPage />}></Route>
+                </Routes>
               </section>
             </main>
             <footer>{<Footer />}</footer>

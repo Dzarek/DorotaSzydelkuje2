@@ -36,12 +36,7 @@ const OthersZabawki = () => {
           {contentProduct.map((link) => {
             const { id, name, slug, imgOthers } = link;
             return (
-              <li
-                onClick={() => {
-                  window.location.reload();
-                }}
-                key={id}
-              >
+              <li key={id}>
                 <Link to={`/order/${slug}`}>
                   <img src={imgOthers} alt={name} />
                   <p>{name}</p>
