@@ -93,7 +93,8 @@
 }
 
 
-video {
+video,
+.video-thumb {
     object-fit: cover;
     width: 100vw;
     height: 100vh;

@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/HomePage.css";
 import { NavLink } from "react-router-dom";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 import yarnBall from "../images/yarnBall.png";
-// import catYarn from "../images/catYarn.gif";
 import videoBg from "../images/backgroundVideo2.mp4";
+import beforeVideo from "../images/beforeVideo.jpg";
 
 import pinguin from "../images/Products/bezTła/piesek3-removebg-preview.png";
 import koc from "../images/Products/bezTła/kocyk1-removebg-preview.png";
@@ -18,11 +18,23 @@ import pufa from "../images/Products/bezTła/pufa6-removebg-preview.png";
 import { useGlobalContext } from "../data2";
 
 const HomePage = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const { contentProduct } = useGlobalContext();
   const readyZabawki = contentProduct.filter((item) => item.ready === true);
+
+  const onLoadedData = () => {
+    setIsVideoLoaded(true);
+  };
+
   return (
     <>
       <div className="home">
+        <img
+          src={beforeVideo}
+          className="video-thumb"
+          alt="thumb"
+          style={{ opacity: isVideoLoaded ? 0 : 1 }}
+        />
         <video
           src={videoBg}
           autoPlay
@@ -30,6 +42,8 @@ const HomePage = () => {
           loop
           playsInline
           type="video/mp4"
+          onLoadedData={onLoadedData}
+          style={{ opacity: isVideoLoaded ? 1 : 0 }}
         ></video>
         <div className="videoFilter"></div>
         <div className="begin">
