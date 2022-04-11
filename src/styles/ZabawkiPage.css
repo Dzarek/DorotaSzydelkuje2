@@ -1,9 +1,9 @@
 .zabawkiPage h1 {
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 70px;
+    font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 8px;
     color: white;
@@ -262,9 +262,10 @@
 @media (orientation: portrait) and (min-width: 320px) {
 
     .zabawkiPage h1 {
-        font-size: 40px;
+        font-size: 35px;
         letter-spacing: 2px;
         width: 95vw;
+        top: 12vh;
     }
 
     .zabawkiPage .pictureZabawki {
@@ -397,7 +398,9 @@
 
 @media (orientation:landscape) and (max-width: 1023px) {
     .zabawkiPage h1 {
-        font-size: 50px;
+        font-size: 35px;
+        width: 95vw;
+        letter-spacing: 2px;
     }
 
     .zabawkiPage .pictureZabawki {

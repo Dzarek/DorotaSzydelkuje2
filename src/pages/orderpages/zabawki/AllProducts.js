@@ -74,7 +74,6 @@ const AllProducts = () => {
   useEffect(() => {
     getData();
   }, []);
-
   const workData = products.filter((item) => item.slug === slug);
 
   if (isLoading) {

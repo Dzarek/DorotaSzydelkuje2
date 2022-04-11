@@ -367,7 +367,7 @@ export const produkt = [
   {
     id: 15,
     name: "RÓŻOWY KOCYK",
-    slug: "różowy-kocyk",
+    slug: "rozowy-kocyk",
     type: "koce",
     price: "120 zł",
     size: "100 cm x 65 cm",
