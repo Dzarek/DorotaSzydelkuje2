@@ -6,7 +6,7 @@ const Cookie = () => {
     <>
       <div className="cookieBg"></div>
       <div className="privateCookie">
-        <h1>Polityka Prywatności i Cookies</h1>
+        <h2>Polityka Prywatności i Cookies</h2>
         <h2>Polityka Prywatności</h2>
         <p>
           Zgodnie z art. 13 ust. 1 i ust. 2 rozporządzenia Parlamentu
