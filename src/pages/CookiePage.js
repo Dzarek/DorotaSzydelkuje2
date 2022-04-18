@@ -1,12 +1,16 @@
 import React from "react";
 import "../styles/ContactPage.css";
+import { Helmet } from "react-helmet-async";
 
 const Cookie = () => {
   return (
     <>
+      <Helmet>
+        <title>Dorota Szydełkuje | Cookie</title>
+      </Helmet>
       <div className="cookieBg"></div>
       <div className="privateCookie">
-        <h2>Polityka Prywatności i Cookies</h2>
+        <h3>Polityka Prywatności i Cookies</h3>
         <h2>Polityka Prywatności</h2>
         <p>
           Zgodnie z art. 13 ust. 1 i ust. 2 rozporządzenia Parlamentu

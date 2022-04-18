@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../styles/BuyPage.css";
 import MyFrom2 from "../components/MyForm2";
 import Carousel from "react-elastic-carousel";
+import { Helmet } from "react-helmet-async";
 
 class BuyPage extends Component {
   constructor(props) {
@@ -45,12 +46,21 @@ class BuyPage extends Component {
     const readyProdukt = workData.filter((item) => item.ready === true);
     return (
       <>
+        <Helmet>
+          <title>Dorota Szydełkuje | Kup Gotowe</title>
+          <meta
+            name="description"
+            content="Tu znajdziesz rzeczy już gotowe, uszyte przeze mnie
+          wcześniej, które możesz mieć od razu"
+          />
+          <link rel="canonical" href="/buyNow" />
+        </Helmet>
         <div className="buyPage">
           <div className="orderBg"> </div>
-          <h1 className={this.state.active ? null : "activeH1Buy"}>
+          <h2 className={this.state.active ? null : "activeH1Buy"}>
             Tu znajdziesz rzeczy już gotowe, <br /> uszyte przeze mnie
             wcześniej, które możesz mieć od razu
-          </h1>
+          </h2>
           <section className={this.state.active ? "toBuyNow2" : "toBuyNow"}>
             <ul>
               {readyProdukt.map((item, index) => {

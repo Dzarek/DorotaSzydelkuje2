@@ -16,6 +16,7 @@ import pufa from "../images/Products/bezTła/pufa6-removebg-preview.png";
 
 // import { produkt } from "../data";
 import { useGlobalContext } from "../data2";
+import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -28,6 +29,14 @@ const HomePage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Dorota Szydełkuje</title>
+        <meta
+          name="description"
+          content="Zakupy rzeczy uszytych na szydełku."
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <div className="home">
         <img
           src={beforeVideo}

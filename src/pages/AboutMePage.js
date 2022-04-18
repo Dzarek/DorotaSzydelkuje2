@@ -11,13 +11,18 @@ import Dorota4a from "../images/DorotaZdj/Dorota4a.jpg";
 import Dorota4b from "../images/DorotaZdj/Dorota4b.jpg";
 
 import arrowDown from "../images/arrowDown.png";
+import { Helmet } from "react-helmet-async";
 
 const AboutMePage = () => {
   return (
     <>
+      <Helmet>
+        <title>Dorota Szydełkuje | O Mnie</title>
+        <link rel="canonical" href="/aboutMe" />
+      </Helmet>
       {/* <div className="aboutBg"></div> */}
       <section className="aboutOne">
-        <h1 className="aboutHello">Cześć !</h1>
+        <h2 className="aboutHello">Cześć !</h2>
         <span className="pAboutMe">
           <p>mam na imię Dorota</p>
           <p>

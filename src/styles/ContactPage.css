@@ -172,7 +172,7 @@
     margin: 20px;
 }
 
-.social4 h1 {
+.social4 h2 {
     font-size: 1.8rem;
     margin: 0 auto 20px;
     color: #fff;
@@ -203,7 +203,7 @@
 
 }
 
-.privateCookie h1 {
+.privateCookie h3 {
     font-size: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -365,7 +365,7 @@
         margin: 20px;
     }
 
-    .social4 h1 {
+    .social4 h2 {
         font-size: 23px;
     }
 
@@ -384,7 +384,7 @@
         padding: 0;
     }
 
-    .privateCookie h1 {
+    .privateCookie h3 {
         font-size: 30px;
     }
 
@@ -509,7 +509,7 @@
         margin: 5px;
     }
 
-    .social4 h1 {
+    .social4 h2 {
         font-size: 20px;
         margin: 0 auto 10px;
     }
@@ -528,7 +528,7 @@
         color: white;
     }
 
-    .privateCookie h1 {
+    .privateCookie h3 {
         font-size: 40px;
         letter-spacing: 1px;
         margin: 100px auto;

@@ -102,10 +102,10 @@ class App extends Component {
                         <BuyPage products={this.state.products} />
                       ) : (
                         <div className="buyPage">
-                          <h1>
+                          <h2>
                             Tu znajdziesz rzeczy już gotowe, <br /> uszyte
                             przeze mnie wcześniej, które możesz mieć od razu
-                          </h1>
+                          </h2>
                           <Loading />
                         </div>
                       )

@@ -7,10 +7,20 @@ import MyFrom from "../components/MyForm";
 import contact1 from "../images/Contact/contact1.png";
 import contact2 from "../images/Contact/contact2.png";
 import contact3 from "../images/Contact/contact3.png";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <>
+      <Helmet>
+        <title>Dorota Szydełkuje | Kontakt</title>
+        <meta
+          name="description"
+          content="Masz pytania lub chcesz coś zamówić?
+            Napisz do mnie!"
+        />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       <div className="formik">
         <div className="myForm">
           <MyFrom />
@@ -31,7 +41,7 @@ const Contact = () => {
         </div>
         <div className="social4">
           <i class="fas fa-university"></i>
-          <h1>dane do przelewu: </h1>
+          <h2>dane do przelewu: </h2>
           <p>bank: Alior Bank</p>
           <p>nr konta : 23 2490 0005 0000 4004 6143 2313</p>
         </div>

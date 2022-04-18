@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/OrderPage.css";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 class OrderPage extends Component {
   constructor(props) {
@@ -75,6 +76,14 @@ class OrderPage extends Component {
     const linksKoce = workData.filter((item) => item.type === "koce");
     return (
       <>
+        <Helmet>
+          <title>Dorota Szydełkuje | Na Zamówienie</title>
+          <meta
+            name="description"
+            content="To proste - wybierz produkt, a ja go dla Ciebie wyszydełkuję!"
+          />
+          <link rel="canonical" href="/order" />
+        </Helmet>
         <div className="orderBg"> </div>
         <div
           // onClick={() => this.setState({ active: false })}
@@ -82,14 +91,14 @@ class OrderPage extends Component {
         >
           {this.state.active && (
             <div className="easyOrder">
-              <h1 className="easyOrderha">To proste - wybierz produkt,</h1>
-              <h1 className="easyOrderhb">a ja go dla Ciebie wyszydełkuję!</h1>
+              <h2 className="easyOrderha">To proste - wybierz produkt,</h2>
+              <h2 className="easyOrderhb">a ja go dla Ciebie wyszydełkuję!</h2>
             </div>
           )}
           {!this.state.activePluszaki &&
           !this.state.activeKoce &&
           !this.state.activePufy ? null : (
-            <h1 className="titleProducts">Wybierz interesujący Cię produkt</h1>
+            <h2 className="titleProducts">Wybierz interesujący Cię produkt</h2>
           )}
           <h2
             className={this.state.active ? "chooseCategory" : "chooseCategory2"}
@@ -233,10 +242,10 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 30, paddingTop: "30vh" }}>
+            <h2 style={{ fontSize: 30, paddingTop: "30vh" }}>
               STRONA W TRAKCIE PRAC... <br /> <br />
               SPRAWDŹ INNE ZAKŁADKI
-            </h1>
+            </h2>
           </div>
         )}
         {this.state.activeKosze && (
@@ -248,10 +257,10 @@ class OrderPage extends Component {
             >
               <i class="far fa-times-circle"></i>
             </button>
-            <h1 style={{ fontSize: 30, paddingTop: "30vh" }}>
+            <h2 style={{ fontSize: 30, paddingTop: "30vh" }}>
               STRONA W TRAKCIE PRAC... <br /> <br />
               SPRAWDŹ INNE ZAKŁADKI
-            </h1>
+            </h2>
           </div>
         )}
       </>

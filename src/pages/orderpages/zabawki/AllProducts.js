@@ -87,7 +87,7 @@ const AllProducts = () => {
         return (
           <div key={id} className="zabawkiPage">
             <div className="orderBg"> </div>
-            <h1>{name}</h1>
+            <h3>{name}</h3>
             <SRLWrapper>
               <section className="pictureZabawki">
                 <Carousel
